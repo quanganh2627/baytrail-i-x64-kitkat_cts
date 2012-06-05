@@ -127,6 +127,8 @@ public class ImportVCardActivity extends ContactsActivity {
 
     private String mErrorMessage;
 
+    static final File EXTERNAL_STORAGE_DIRECTORY_EXT = new File( "/mnt/sdcard_ext");
+
     private Handler mHandler = new Handler();
 
     private static class VCardFile {
@@ -635,6 +637,8 @@ public class ImportVCardActivity extends ContactsActivity {
             try {
                 mWakeLock.acquire();
                 getVCardFileRecursively(mRootDirectory);
+                // get vcard file from sdcard_ext
+                getVCardFileFromSdcardExt(EXTERNAL_STORAGE_DIRECTORY_EXT);
             } catch (CanceledException e) {
                 mCanceled = true;
             } catch (IOException e) {
@@ -695,6 +699,46 @@ public class ImportVCardActivity extends ContactsActivity {
 
                 if (file.isDirectory()) {
                     getVCardFileRecursively(file);
+                } else if (canonicalPath.toLowerCase().endsWith(".vcf") &&
+                        file.canRead()){
+                    String fileName = file.getName();
+                    VCardFile vcardFile = new VCardFile(
+                            fileName, canonicalPath, file.lastModified());
+                    mAllVCardFileList.add(vcardFile);
+                }
+            }
+        }
+
+       public void getVCardFileFromSdcardExt(File directory)
+             throws CanceledException, IOException{
+
+            if (mCanceled) {
+                throw new CanceledException();
+            }
+
+            final File[] files = directory.listFiles();
+            if (files == null) {
+                final String currentDirectoryPath = directory.getCanonicalPath();
+                final String secureDirectoryPath =
+                    EXTERNAL_STORAGE_DIRECTORY_EXT.getCanonicalPath().concat(SECURE_DIRECTORY_NAME);
+                if (!TextUtils.equals(currentDirectoryPath, secureDirectoryPath)) {
+                    Log.w(LOG_TAG, "listFiles() returned null (directory: " + directory + ")");
+                }
+                return;
+            }
+            for (File file : directory.listFiles()) {
+                if (mCanceled) {
+                    throw new CanceledException();
+                }
+                String canonicalPath = file.getCanonicalPath();
+                if (mCheckedPaths.contains(canonicalPath)) {
+                    continue;
+                }
+
+                mCheckedPaths.add(canonicalPath);
+
+                if (file.isDirectory()) {
+                   getVCardFileFromSdcardExt(file);
                 } else if (canonicalPath.toLowerCase().endsWith(".vcf") &&
                         file.canRead()){
                     String fileName = file.getName();
