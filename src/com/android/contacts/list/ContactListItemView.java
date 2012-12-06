@@ -29,6 +29,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
+import android.telephony.PhoneNumberUtils;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -1132,6 +1133,7 @@ public class ContactListItemView extends ViewGroup
         if (extras.getBoolean(ContactsContract.DEFERRED_SNIPPETING)) {
             int displayNameIndex = cursor.getColumnIndex(Contacts.DISPLAY_NAME);
 
+            columnContent = trimSpaceInNumber(columnContent);
             snippet = ContactsContract.snippetize(columnContent,
                     displayNameIndex < 0 ? null : cursor.getString(displayNameIndex),
                             extras.getString(ContactsContract.DEFERRED_SNIPPETING_QUERY),
@@ -1175,6 +1177,23 @@ public class ContactListItemView extends ViewGroup
         }
         setSnippet(snippet);
     }
+
+    private String trimSpaceInNumber(String phoneNumber) {
+         if (phoneNumber == null) return null;
+         int len = phoneNumber.length();
+         StringBuilder sb = new StringBuilder();
+         for (int i = 0; i < len; i++) {
+             char temp = phoneNumber.charAt(i);
+             if (temp == ' ') continue;
+             if (PhoneNumberUtils.isDialable(temp) ||
+                   temp == DefaultContactListAdapter.SNIPPET_START_MATCH) {
+                 sb.append(temp);
+             } else {
+                 return phoneNumber;
+             }
+         }
+         return sb.toString();
+     }
 
     /**
      * Shows data element (e.g. phone number).
