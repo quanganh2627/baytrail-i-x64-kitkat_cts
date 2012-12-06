@@ -372,7 +372,10 @@ public class ImportVCardActivity extends ContactsActivity {
             } finally {
                 Log.i(LOG_TAG, "Finished caching vCard.");
                 mWakeLock.release();
-                unbindService(mConnection);
+                try {
+                    unbindService(mConnection);
+                } catch (Exception e){
+                }
                 mProgressDialogForCachingVCard.dismiss();
                 mProgressDialogForCachingVCard = null;
                 finish();
