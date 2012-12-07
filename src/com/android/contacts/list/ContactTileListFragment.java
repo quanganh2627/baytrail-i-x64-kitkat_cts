@@ -163,6 +163,9 @@ public class ContactTileListFragment extends Fragment {
 
         @Override
         public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+            if (data == null || data.isClosed()) {
+                return;
+            }
             mAdapter.setContactCursor(data);
             mEmptyView.setText(getEmptyStateText());
             mListView.setEmptyView(mEmptyView);
