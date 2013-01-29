@@ -1537,7 +1537,11 @@ public class PeopleActivity extends ContactsActivity
                 } else {
                     // Otherwise, on 1-pane UI, we need the editor to launch the view contact
                     // intent itself.
-                    startActivity(intent);
+                    try {
+                        startActivity(intent);
+                    } catch (ActivityNotFoundException e) {
+                        Log.e(TAG, "No activity found for intent: " + intent);
+                    }
                 }
                 return true;
             }
