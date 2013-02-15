@@ -20,12 +20,15 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.FragmentManager;
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.ContactsContract.Contacts;
 import android.telephony.TelephonyManager;
@@ -45,6 +48,13 @@ import com.android.contacts.util.AccountSelectionUtil;
 import com.android.contacts.util.AccountsListAdapter.AccountListFilter;
 import com.android.contacts.vcard.ExportVCardActivity;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -56,6 +66,7 @@ public class ImportExportDialogFragment extends DialogFragment
 
     private static final String KEY_RES_ID = "resourceId";
     private static final String ARG_CONTACTS_ARE_AVAILABLE = "CONTACTS_ARE_AVAILABLE";
+    public static final String VISIBLE_CONTACTS_FILE = "Contacts.vcf";
 
     private final String[] LOOKUP_PROJECTION = new String[] {
             Contacts.LOOKUP_KEY
@@ -130,7 +141,7 @@ public class ImportExportDialogFragment extends DialogFragment
                     }
                     case R.string.share_visible_contacts: {
                         dismissDialog = true;
-                        doShareVisibleContacts();
+                        new shareVisibleContactsTask(getActivity()).execute();
                         break;
                     }
                     default: {
@@ -152,36 +163,85 @@ public class ImportExportDialogFragment extends DialogFragment
                 .create();
     }
 
-    private void doShareVisibleContacts() {
-        // TODO move the query into a loader and do this in a background thread
-        final Cursor cursor = getActivity().getContentResolver().query(Contacts.CONTENT_URI,
-                LOOKUP_PROJECTION, Contacts.IN_VISIBLE_GROUP + "!=0", null, null);
-        if (cursor != null) {
-            try {
-                if (!cursor.moveToFirst()) {
-                    Toast.makeText(getActivity(), R.string.share_error, Toast.LENGTH_SHORT).show();
-                    return;
+    private class shareVisibleContactsTask extends AsyncTask<Void, Void, Boolean> {
+        private Activity activity;
+
+        public shareVisibleContactsTask(Activity activity) {
+            this.activity = activity;
+        }
+
+        protected Boolean doInBackground(Void... arg0) {
+            final Cursor cursor = activity.getContentResolver().query(Contacts.CONTENT_URI,
+                    LOOKUP_PROJECTION, Contacts.IN_VISIBLE_GROUP + "!=0", null, null);
+            Uri uri;
+            if (cursor != null && cursor.getCount()>0) {
+                try {
+                    if (!cursor.moveToFirst()) {
+                        return false;
+                    }
+                    StringBuilder uriListBuilder = new StringBuilder();
+                    int index = 0;
+                    do {
+                        if (index != 0)
+                            uriListBuilder.append(':');
+                        uriListBuilder.append(cursor.getString(0));
+                        index++;
+                    } while (cursor.moveToNext());
+                    uri = Uri.withAppendedPath(
+                            Contacts.CONTENT_MULTI_VCARD_URI,
+                            Uri.encode(uriListBuilder.toString()));
+                } finally {
+                    cursor.close();
                 }
+                ArrayList<String> vCard = new ArrayList<String>();
 
-                StringBuilder uriListBuilder = new StringBuilder();
-                int index = 0;
-                do {
-                    if (index != 0)
-                        uriListBuilder.append(':');
-                    uriListBuilder.append(cursor.getString(0));
-                    index++;
-                } while (cursor.moveToNext());
-                Uri uri = Uri.withAppendedPath(
-                        Contacts.CONTENT_MULTI_VCARD_URI,
-                        Uri.encode(uriListBuilder.toString()));
-
-                final Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType(Contacts.CONTENT_VCARD_TYPE);
-                intent.putExtra(Intent.EXTRA_STREAM, uri);
-                getActivity().startActivity(intent);
-            } finally {
-                cursor.close();
+                FileInputStream fis = null;
+                FileOutputStream mFileOutputStream = null;
+                try {
+                    AssetFileDescriptor fd = activity.getContentResolver().openAssetFileDescriptor(uri, "r");
+                    fis = fd.createInputStream();
+                    byte[] buf = new byte[(int) fd.getDeclaredLength()];
+                    fis.read(buf);
+                    String vcardstring= new String(buf);
+                    vCard.add(vcardstring);
+                    mFileOutputStream = new FileOutputStream(new File(activity.getExternalCacheDir(), VISIBLE_CONTACTS_FILE));
+                    mFileOutputStream.write(vcardstring.toString().getBytes());
+                } catch (FileNotFoundException e) {
+                    Log.e(TAG, "Problem saving vcards: " + e.toString());
+                    return false;
+                } catch (IOException e) {
+                    Log.e(TAG, "Problem saving vcards: " + e.toString());
+                    return false;
+                } catch (Exception e) {
+                    Log.e(TAG, "Problem saving vcards: " + e.toString());
+                    return false;
+                } finally {
+                    try {
+                        if (fis != null) {
+                            fis.close();
+                        }
+                        if (mFileOutputStream != null) {
+                            mFileOutputStream.close();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
+            return true;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean isVcardsSaved) {
+            if (!isVcardsSaved) {
+                Log.e(TAG, "Vcards not saved before sharing");
+                return;
+            }
+            final Intent intent = new Intent(Intent.ACTION_SEND);
+            Uri fileUri = Uri.fromFile(new File(activity.getExternalCacheDir(), VISIBLE_CONTACTS_FILE));
+            intent.setType(Contacts.CONTENT_VCARD_TYPE);
+            intent.putExtra(Intent.EXTRA_STREAM, fileUri);
+            activity.startActivity(intent);
         }
     }
 
