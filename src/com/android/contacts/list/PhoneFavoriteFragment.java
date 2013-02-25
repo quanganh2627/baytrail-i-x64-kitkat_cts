@@ -386,7 +386,9 @@ public class PhoneFavoriteFragment extends Fragment implements OnItemClickListen
     public void onPrepareOptionsMenu(Menu menu) {
         final MenuItem clearFrequents = menu.findItem(R.id.menu_clear_frequents);
         mOptionsMenuHasFrequents = hasFrequents();
-        clearFrequents.setVisible(mOptionsMenuHasFrequents);
+        if (clearFrequents != null) {
+            clearFrequents.setVisible(mOptionsMenuHasFrequents);
+        }
     }
 
     private boolean hasFrequents() {
