@@ -274,7 +274,6 @@ import javax.annotation.concurrent.GuardedBy;
             int requestId = ((Integer) cookie).intValue();
             if (requestId != mCallsRequestId) {
                 // Ignore this query since it does not correspond to the latest request.
-                MoreCloseables.closeQuietly(cursor);
                 return;
             }
 
@@ -286,7 +285,6 @@ import javax.annotation.concurrent.GuardedBy;
             int requestId = ((Integer) cookie).intValue();
             if (requestId != mCallsRequestId) {
                 // Ignore this query since it does not correspond to the latest request.
-                MoreCloseables.closeQuietly(cursor);
                 return;
             }
 
@@ -299,7 +297,6 @@ import javax.annotation.concurrent.GuardedBy;
             return;
         } else {
             Log.w(TAG, "Unknown query completed: ignoring: " + token);
-            MoreCloseables.closeQuietly(cursor);
             return;
         }
 
@@ -346,18 +343,12 @@ import javax.annotation.concurrent.GuardedBy;
         if (listener != null) {
             listener.onCallsFetched(combinedCursor);
         }
-        else {
-            MoreCloseables.closeQuietly(combinedCursor);
-        }
     }
 
     private void updateVoicemailStatus(Cursor statusCursor) {
         final Listener listener = mListener.get();
         if (listener != null) {
             listener.onVoicemailStatusFetched(statusCursor);
-        }
-        else {
-            MoreCloseables.closeQuietly(statusCursor);
         }
     }
 
