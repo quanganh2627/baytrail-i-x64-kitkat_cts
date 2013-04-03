@@ -50,8 +50,10 @@ import com.android.contacts.vcard.ExportVCardActivity;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.BufferedInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -193,42 +195,48 @@ public class ImportExportDialogFragment extends DialogFragment
                 } finally {
                     cursor.close();
                 }
-                ArrayList<String> vCard = new ArrayList<String>();
-
-                FileInputStream fis = null;
-                FileOutputStream mFileOutputStream = null;
+                BufferedOutputStream bos = null;
+                BufferedInputStream bis = null;
+                boolean result = false;
                 try {
-                    AssetFileDescriptor fd = activity.getContentResolver().openAssetFileDescriptor(uri, "r");
-                    fis = fd.createInputStream();
-                    byte[] buf = new byte[(int) fd.getDeclaredLength()];
-                    fis.read(buf);
-                    String vcardstring= new String(buf);
-                    vCard.add(vcardstring);
-                    mFileOutputStream = new FileOutputStream(new File(activity.getExternalCacheDir(), VISIBLE_CONTACTS_FILE));
-                    mFileOutputStream.write(vcardstring.toString().getBytes());
-                } catch (FileNotFoundException e) {
-                    Log.e(TAG, "Problem saving vcards: " + e.toString());
-                    return false;
-                } catch (IOException e) {
-                    Log.e(TAG, "Problem saving vcards: " + e.toString());
-                    return false;
-                } catch (Exception e) {
-                    Log.e(TAG, "Problem saving vcards: " + e.toString());
-                    return false;
-                } finally {
                     try {
-                        if (fis != null) {
-                            fis.close();
+                        AssetFileDescriptor fd = activity.getContentResolver().openAssetFileDescriptor(uri, "r");
+                        if (fd == null) {
+                            return false;
                         }
-                        if (mFileOutputStream != null) {
-                            mFileOutputStream.close();
+                        bos = new BufferedOutputStream(new FileOutputStream(new File(activity.getExternalCacheDir(), VISIBLE_CONTACTS_FILE)));
+                        bis = new BufferedInputStream(fd.createInputStream());
+                        byte[] buf = new byte[(int) 16*1024];
+                        int readBytes;
+                        while ((readBytes = bis.read(buf)) != -1) {
+                            bos.write(buf, 0, readBytes);
                         }
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                        bos.flush();
+                        result = true;
+                    } finally {
+                        if (bis != null) {
+                            bis.close();
+                        }
                     }
+                } catch (FileNotFoundException e) {
+                    Log.e(TAG, "Exception while saving vcards: ", e);
+                    result = false;
+                } catch (IOException e) {
+                    Log.e(TAG, "Exception while saving vcards: ", e);
+                    result = false;
+                } finally {
+                    if (bos != null) {
+                        try {
+                            bos.close();
+                        } catch (IOException e) {
+                            Log.e(TAG, "Exception while saving vcards: ", e);
+                            return false;
+                        }
+                    }
+                    return result;
                 }
             }
-            return true;
+            return false;
         }
 
         @Override
