@@ -93,7 +93,6 @@ import com.android.contacts.util.PhoneCapabilityTester;
 import com.android.contacts.util.UriUtils;
 import com.android.contacts.widget.TransitionAnimationView;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -525,10 +524,6 @@ public class PeopleActivity extends ContactsActivity
             mContactListFilterController.removeListener(this);
         }
 
-        File file = new File(getExternalCacheDir(), ImportExportDialogFragment.VISIBLE_CONTACTS_FILE);
-        if (file != null) {
-            file.delete();
-        }
         super.onDestroy();
     }
 
@@ -1541,11 +1536,7 @@ public class PeopleActivity extends ContactsActivity
                 } else {
                     // Otherwise, on 1-pane UI, we need the editor to launch the view contact
                     // intent itself.
-                    try {
-                        startActivity(intent);
-                    } catch (ActivityNotFoundException e) {
-                        Log.e(TAG, "No activity found for intent: " + intent);
-                    }
+                    startActivity(intent);
                 }
                 return true;
             }

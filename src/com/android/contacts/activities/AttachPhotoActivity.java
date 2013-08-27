@@ -172,13 +172,6 @@ public class AttachPhotoActivity extends ContactsActivity {
      */
     private void saveContact(Contact contact) {
 
-        //save operation can be interrupted, and when it continue, null point will be caught .
-        // we judge here if contact.getRawContacts() == null. it means this contact may be deleted,and no more exist.just finish and return.
-        if(contact.getRawContacts() == null)
-        {
-            finish();
-            return;
-        }
         // Obtain the raw-contact that we will save to.
         RawContactDeltaList deltaList = contact.createRawContactDeltaList();
         RawContactDelta raw = deltaList.getFirstWritableRawContact(this);
