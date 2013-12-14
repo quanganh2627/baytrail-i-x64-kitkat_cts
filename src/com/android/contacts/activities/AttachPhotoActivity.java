@@ -33,12 +33,12 @@ import android.util.Log;
 
 import com.android.contacts.ContactSaveService;
 import com.android.contacts.ContactsActivity;
-import com.android.contacts.ContactsUtils;
-import com.android.contacts.model.Contact;
-import com.android.contacts.model.ContactLoader;
-import com.android.contacts.model.RawContactDelta;
-import com.android.contacts.model.RawContactDeltaList;
-import com.android.contacts.model.RawContactModifier;
+import com.android.contacts.common.model.Contact;
+import com.android.contacts.common.model.ContactLoader;
+import com.android.contacts.common.model.RawContactDelta;
+import com.android.contacts.common.model.RawContactDeltaList;
+import com.android.contacts.common.model.RawContactModifier;
+import com.android.contacts.common.ContactsUtils;
 import com.android.contacts.common.model.account.AccountType;
 import com.android.contacts.common.model.ValuesDelta;
 import com.android.contacts.util.ContactPhotoUtils;
@@ -206,6 +206,14 @@ public class AttachPhotoActivity extends ContactsActivity {
      */
     private void saveContact(Contact contact) {
 
+        // save operation can be interrupted, and when it continue, null point will be caught .
+        // we judge here if contact.getRawContacts() == null.it means this contact may be deleted,
+        // and no more exist.just finish and return.
+        if (contact.getRawContacts() == null)
+        {
+            finish();
+            return;
+        }
         // Obtain the raw-contact that we will save to.
         RawContactDeltaList deltaList = contact.createRawContactDeltaList();
         RawContactDelta raw = deltaList.getFirstWritableRawContact(this);
