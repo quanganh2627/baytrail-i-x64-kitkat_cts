@@ -512,6 +512,17 @@ public class PeopleActivity extends ContactsActivity
         // Current tab may have changed since the last onSaveInstanceState().  Make sure
         // the actual contents match the tab.
         updateFragmentsVisibility();
+
+        if (mContactDetailsView != null
+                && mContactDetailsView.getVisibility() == View.VISIBLE) {
+            View view = mContactDetailsView
+                    .findViewById(R.id.contact_detail_container);
+            if (view != null
+                    && mContactDetailsView.indexOfChild(view) != mContactDetailsView
+                            .getChildCount() - 1) {
+                view.bringToFront();
+            }
+        }
     }
 
     @Override
