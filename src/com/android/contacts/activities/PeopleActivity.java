@@ -94,6 +94,8 @@ import com.android.contacts.util.PhoneCapabilityTester;
 import com.android.contacts.common.util.UriUtils;
 import com.android.contacts.widget.TransitionAnimationView;
 
+import com.intel.config.FeatureConfig;
+
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -1011,7 +1013,12 @@ public class PeopleActivity extends ContactsActivity
 
         mAllFragment.setVerticalScrollbarPosition(getScrollBarPosition(useTwoPane));
         mAllFragment.setSelectionVisible(useTwoPane);
-        mAllFragment.setQuickContactEnabled(!useTwoPane);
+        // ARKHAM-1649 always use QuickContactBadge
+        // which is added arkham feature, to show Photo
+        if (FeatureConfig.INTEL_FEATURE_ARKHAM)
+            mAllFragment.setQuickContactEnabled(true);
+        else
+            mAllFragment.setQuickContactEnabled(!useTwoPane);
     }
 
     private int getScrollBarPosition(boolean useTwoPane) {
