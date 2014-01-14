@@ -16,6 +16,7 @@ LOCAL_AAPT_FLAGS := \
     --extra-packages com.android.contacts.common
 
 LOCAL_JAVA_LIBRARIES := telephony-common voip-common
+LOCAL_JAVA_LIBRARIES += com.intel.config
 LOCAL_STATIC_JAVA_LIBRARIES := \
     com.android.phone.shared \
     com.android.vcard \
