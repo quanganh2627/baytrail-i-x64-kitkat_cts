@@ -161,6 +161,8 @@
     <string name="add_organization" msgid="7311893231158291197">"新增機構"</string>
     <string name="event_edit_field_hint_text" msgid="5794424930242630477">"日期"</string>
     <string name="group_edit_field_hint_text" msgid="3966441850870457808">"群組名稱"</string>
+    <string name="contact_status_update_attribution" msgid="752179367353018597">"透過 <xliff:g id="SOURCE">%1$s</xliff:g>"</string>
+    <string name="contact_status_update_attribution_with_date" msgid="7358045508107825068">"<xliff:g id="DATE">%1$s</xliff:g> (透過 <xliff:g id="SOURCE">%2$s</xliff:g>)"</string>
     <string name="description_star" msgid="2605854427360036550">"我的收藏"</string>
     <string name="edit_contact" msgid="7529281274005689512">"編輯聯絡人"</string>
   <plurals name="merge_info">
@@ -229,4 +231,40 @@
     <string name="add_new_account" msgid="5748627740680940264">"新增帳戶"</string>
     <string name="menu_export_database" msgid="2659719297530170820">"匯出資料庫檔案"</string>
     <string name="contact_detail_picture_description" msgid="6083230522651287030">"圖片 (選取即可變更)"</string>
+
+    <!-- Strings added by Pekall -->
+    <string name="confirm_export_to_sim_message">"您的聯絡人清單即將匯出至 SIM 卡。"</string>
+    <string name="confirm_export_contact_to_sim_message">"您的聯絡人 <xliff:g id="NAME">%s</xliff:g> 即將匯出至 SIM 卡。"</string>
+    <string name="confirm_export_to_sim_message_ds">"您的聯絡人清單即將匯出至 <xliff:g id="SIM">%s</xliff:g>。"</string>
+    <string name="confirm_export_contact_to_sim_message_ds">"您的聯絡人 <xliff:g id="NAME">%s</xliff:g> 即將匯出至 <xliff:g id="SIM">%s</xliff:g>。"</string>
+    <string name="confirm_export_no_enough_sim_space_title">"SIM 卡空間不足"</string>
+    <string name="confirm_export_x_entries_in_sim_will_be_deleted_message">"您的 SIM 卡空間不足。匯出之前 <xliff:g id="num">%d</xliff:g> 個聯絡人將被從 SIM 卡刪除。您想繼續嗎？"</string>
+    <string name="confirm_export_till_sim_full_message">"您的 SIM 卡空間太小。您的聯絡人將被匯出至 SIM 卡直到 SIM 卡滿。您想要繼續嗎？"</string>
+    <string name="exporting_contact_list_message_ds">"正在將您的聯絡人資料匯出至 <xliff:g id="SIM">%s</xliff:g>。"</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">"注意"</string>
+    <string name="confirm_export_name_will_be_truncated">"您的聯系人名字超長，會被截短。"</string>
+    <string name="pinned_header_contacts_to_be_truncated">"名字會被截短的聯絡人"</string>
+    <string name="pinned_header_contacts_to_be_ignored">"號碼超長會被忽略的聯絡人"</string>
+    <string name="pinned_header_contacts_not_be_exported">"没有被匯出的聯絡人"</string>
+
+    <string name="searching_contacts_title">"正在搜尋聯絡人"</string>
+    <string name="searching_contacts_message">"正在搜尋可以匯出至 SIM 卡上的聯絡人…"</string>
+    <string name="checking_sim_card_title">"正在檢查 SIM 卡"</string>
+    <string name="checking_sim_card_message">"檢查 SIM 卡是否有足夠的空間來做聯絡人匯出"</string>
+    <string name="export_failure_no_contact_title">"找不到聯絡人"</string>
+    <string name="export_failure_no_contact">"找不到可以匯出至 SIM 卡上的聯絡人。"</string>
+    <string name="export_failure_not_completed_title">"匯出未完成"</string>
+    <string name="export_failure_not_all_completed">"未能將您的所有聯絡人匯出至 SIM 卡"</string>
+    <string name="export_failure_not_completed">"未能將您的聯絡人 <xliff:g id="NAME">%s</xliff:g> 匯出至 SIM 卡"</string>
+    <string name="export_failure_title">"匯出失敗"</string>
+    <string name="export_failure_unable_to_read_contact">"無法讀取被選中聯絡人資料"</string>
+    <string name="export_failure_sim_is_not_ready">"SIM 卡不可用，請稍候再試。"</string>
+    <string name="export_failure_contains_long_number">"您的聯絡人包含超長號碼, 無法被匯出。"</string>
+
+    <string name="export_to_sim">匯出到 SIM 卡</string>
+
+    <string name="simText">SIM 卡</string>
+    <string name="sim1Text">1 卡</string>
+    <string name="sim2Text">2 卡</string>
 </resources>

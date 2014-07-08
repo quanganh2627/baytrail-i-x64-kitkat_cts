@@ -163,6 +163,9 @@ public class ContactTileListFragment extends Fragment {
 
         @Override
         public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+            if (data == null || data.isClosed()) {
+                return;
+            }
             mAdapter.setContactCursor(data);
             mEmptyView.setText(getEmptyStateText());
             mListView.setEmptyView(mEmptyView);
@@ -217,7 +220,21 @@ public class ContactTileListFragment extends Fragment {
         }
 
         @Override
+        public void onContactSelected2(Uri contactUri, Rect targetRect) {
+            if (mListener != null) {
+                mListener.onContactSelected(contactUri, targetRect);
+            }
+        }
+
+        @Override
         public void onCallNumberDirectly(String phoneNumber) {
+            if (mListener != null) {
+                mListener.onCallNumberDirectly(phoneNumber);
+            }
+        }
+
+        @Override
+        public void onCallNumberDirectly2(String phoneNumber) {
             if (mListener != null) {
                 mListener.onCallNumberDirectly(phoneNumber);
             }

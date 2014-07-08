@@ -33,7 +33,7 @@
             class="com.android.contacts.common.widget.ProportionalLayout"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            ex:ratio="1.0"
+            ex:ratio="0.7"
             ex:direction="heightToWidth">
             <include layout="@layout/quickcontact_photo_container" />
         </view>

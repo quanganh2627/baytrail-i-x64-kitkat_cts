@@ -41,6 +41,9 @@ public interface Action extends Collapser.Collapsible<Action> {
     /** Build an {@link Intent} that will perform this action. */
     public Intent getIntent();
 
+    /** Build an {@link Intent} that will perform similar action on SIM 2. */
+    public Intent getPrimary2Intent();
+
     /** Build an {@link Intent} that will perform the alternate action. */
     public Intent getAlternateIntent();
 

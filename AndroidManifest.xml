@@ -50,6 +50,7 @@
     <!-- allow broadcasting secret code intents that reboot the phone -->
     <uses-permission android:name="android.permission.REBOOT" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:name="com.android.contacts.ContactsApplication"
@@ -351,7 +352,8 @@
         <activity
             android:name=".activities.ContactEditorActivity"
             android:theme="@style/EditorActivityTheme"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="orientation|screenSize|keyboardHidden">
 
             <intent-filter android:label="@string/editContactDescription">
                 <action android:name="android.intent.action.EDIT" />
@@ -507,6 +509,10 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <activity android:name="ExportSimContactsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/BackgroundOnlyTheme" />
 
         <meta-data android:name="android.nfc.disable_beam_default" android:value="true" />
     </application>

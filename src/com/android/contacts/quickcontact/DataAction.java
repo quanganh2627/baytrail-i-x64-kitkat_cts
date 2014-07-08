@@ -29,13 +29,14 @@ import android.provider.ContactsContract.Data;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.android.contacts.R;
 import com.android.contacts.common.CallUtil;
 import com.android.contacts.common.ContactsUtils;
-import com.android.contacts.R;
 import com.android.contacts.common.MoreContactUtils;
 import com.android.contacts.common.model.account.AccountType.EditType;
 import com.android.contacts.common.model.dataitem.DataItem;
 import com.android.contacts.common.model.dataitem.DataKind;
+import com.android.contacts.common.util.DualSimConstants;
 import com.android.contacts.common.model.dataitem.EmailDataItem;
 import com.android.contacts.common.model.dataitem.ImDataItem;
 import com.android.contacts.common.model.dataitem.PhoneDataItem;
@@ -59,6 +60,7 @@ public class DataAction implements Action {
     private CharSequence mBody;
     private CharSequence mSubtitle;
     private Intent mIntent;
+    private Intent mPrimary2Intent;
     private Intent mAlternateIntent;
     private int mAlternateIconDescriptionRes;
     private int mAlternateIconRes;
@@ -113,23 +115,37 @@ public class DataAction implements Action {
                 final String number = phone.getNumber();
                 if (!TextUtils.isEmpty(number)) {
 
-                    final Intent phoneIntent = hasPhone ? CallUtil.getCallIntent(number)
-                            : null;
+                    //final Intent phoneIntent = hasPhone ? CallUtil.getCallIntent(number)
+                    //        : null;
                     Intent smsIntent = null;
+                    Intent phoneIntent = null;
+                    Intent phone2Intent = null;
                     if (hasSms) {
                         smsIntent = new Intent(Intent.ACTION_SENDTO,
                                 Uri.fromParts(CallUtil.SCHEME_SMSTO, number, null));
                         smsIntent.setComponent(smsComponent);
                     }
+                    if (hasPhone) {
+                        if (ContactsUtils.isDualSimSupported()) {
+                            phoneIntent = ContactsUtils.getDualSimCallIntent(number,
+                                    DualSimConstants.DSDS_SLOT_1_ID);
+                            phone2Intent = ContactsUtils.getDualSimCallIntent(number,
+                                    DualSimConstants.DSDS_SLOT_2_ID);
+                        } else {
+                            phoneIntent = CallUtil.getCallIntent(number);
+                        }
+                    }
 
                     // Configure Icons and Intents. Notice actionIcon is already set to the phone
                     if (hasPhone && hasSms) {
                         mIntent = phoneIntent;
+                        mPrimary2Intent= phone2Intent;
                         mAlternateIntent = smsIntent;
                         mAlternateIconRes = kind.iconAltRes;
                         mAlternateIconDescriptionRes = kind.iconAltDescriptionRes;
                     } else if (hasPhone) {
                         mIntent = phoneIntent;
+                        mPrimary2Intent= phone2Intent;
                     } else if (hasSms) {
                         mIntent = smsIntent;
                     }
@@ -291,6 +307,11 @@ public class DataAction implements Action {
     @Override
     public Intent getIntent() {
         return mIntent;
+    }
+
+    @Override
+    public Intent getPrimary2Intent() {
+        return mPrimary2Intent;
     }
 
     @Override

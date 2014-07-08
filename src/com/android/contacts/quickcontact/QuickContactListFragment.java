@@ -32,8 +32,11 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.android.contacts.common.ContactPresenceIconUtil;
 import com.android.contacts.R;
+import com.android.contacts.common.ContactPresenceIconUtil;
+import com.android.contacts.common.ContactsUtils;
+import com.android.contacts.common.util.DualSimConstants;
+import com.android.contacts.common.util.SimUtils;
 
 import java.util.List;
 
@@ -100,11 +103,16 @@ public class QuickContactListFragment extends Fragment {
                 final Action action = mActions.get(position);
                 String mimeType = action.getMimeType();
 
+                int resource = R.layout.quickcontact_list_item;
+                if (ContactsUtils.isDualSimSupported()) {
+                    resource = R.layout.quickcontact_list_item_ds;
+                }
+
                 final View resultView = convertView != null ? convertView
                         : getActivity().getLayoutInflater().inflate(
                                 mimeType.equals(StructuredPostal.CONTENT_ITEM_TYPE) ?
                                         R.layout.quickcontact_list_item_address :
-                                        R.layout.quickcontact_list_item,
+                                        resource,
                                         parent, false);
 
                 // TODO: Put those findViewByIds in a container
@@ -114,6 +122,12 @@ public class QuickContactListFragment extends Fragment {
                         android.R.id.text2);
                 final View actionsContainer = resultView.findViewById(
                         R.id.actions_view_container);
+                final ImageView primary1ActionButton = (ImageView) resultView.findViewById(
+                        R.id.primary_1_action_button);
+                final ImageView primary2ActionButton = (ImageView) resultView.findViewById(
+                        R.id.primary_2_action_button);
+                final View primary2ActionDivider = resultView.findViewById(
+                        R.id.primary_2_vertical_divider);
                 final ImageView alternateActionButton = (ImageView) resultView.findViewById(
                         R.id.secondary_action_button);
                 final View alternateActionDivider = resultView.findViewById(R.id.vertical_divider);
@@ -124,6 +138,43 @@ public class QuickContactListFragment extends Fragment {
                 actionsContainer.setTag(action);
                 alternateActionButton.setOnClickListener(mSecondaryActionClickListener);
                 alternateActionButton.setTag(action);
+
+                final boolean hasPrimary2Action = action.getPrimary2Intent() != null;
+                if (ContactsUtils.isDualSimSupported() && hasPrimary2Action) {
+                    if (primary1ActionButton != null) {
+                        primary1ActionButton.setVisibility(View.VISIBLE);
+                        if (SimUtils.isSim1Ready(getActivity())) {
+                            actionsContainer.setOnClickListener(mPrimaryActionClickListener);
+                            primary1ActionButton.setEnabled(true);
+                        } else {
+                            actionsContainer.setOnClickListener(null);
+                            primary1ActionButton.setEnabled(false);
+                        }
+                    }
+                    if (primary2ActionButton != null) {
+                        primary2ActionButton.setOnClickListener(mPrimary2ActionClickListener);
+                        primary2ActionButton.setTag(action);
+                        primary2ActionButton.setVisibility(View.VISIBLE);
+                        if (SimUtils.isSim2Ready(getActivity())) {
+                            primary2ActionButton.setEnabled(true);
+                        } else {
+                            primary2ActionButton.setEnabled(false);
+                        }
+                    }
+                    if (primary2ActionDivider != null) {
+                        primary2ActionDivider.setVisibility(View.VISIBLE);
+                    }
+                } else {
+                    if (primary1ActionButton != null) {
+                        primary1ActionButton.setVisibility(View.GONE);
+                    }
+                    if (primary2ActionButton != null) {
+                        primary2ActionButton.setVisibility(View.GONE);
+                    }
+                    if (primary2ActionDivider != null) {
+                        primary2ActionDivider.setVisibility(View.GONE);
+                    }
+                }
 
                 final boolean hasAlternateAction = action.getAlternateIntent() != null;
                 alternateActionDivider.setVisibility(hasAlternateAction ? View.VISIBLE : View.GONE);
@@ -172,7 +223,15 @@ public class QuickContactListFragment extends Fragment {
         @Override
         public void onClick(View v) {
             final Action action = (Action) v.getTag();
-            if (mListener != null) mListener.onItemClicked(action, false);
+            if (mListener != null) mListener.onItemClicked(action, Listener.TYPE_PRIMARY);
+        }
+    };
+
+    protected final OnClickListener mPrimary2ActionClickListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            final Action action = (Action) v.getTag();
+            if (mListener != null) mListener.onItemClicked(action, Listener.TYPE_PRIMARY_2);
         }
     };
 
@@ -181,7 +240,7 @@ public class QuickContactListFragment extends Fragment {
         @Override
         public void onClick(View v) {
             final Action action = (Action) v.getTag();
-            if (mListener != null) mListener.onItemClicked(action, true);
+            if (mListener != null) mListener.onItemClicked(action, Listener.TYPE_ALTERNATE);
         }
     };
 
@@ -193,7 +252,11 @@ public class QuickContactListFragment extends Fragment {
     };
 
     public interface Listener {
+        public static final int TYPE_ALTERNATE = 1;
+        public static final int TYPE_PRIMARY_2 = 2;
+        public static final int TYPE_PRIMARY = 0;
         void onOutsideClick();
         void onItemClicked(Action action, boolean alternate);
+        void onItemClicked(Action action, int type);
     }
 }

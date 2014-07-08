@@ -148,6 +148,17 @@
     <dimen name="join_header_top_margin">16dip</dimen>
     <dimen name="join_header_bottom_margin">0dip</dimen>
 
+
+    <!--For DSDS-->
+    <dimen name="quick_contact_action_button_width">48dip</dimen>
+    <dimen name="quick_contact_action_button_inner_margin">8dip</dimen>
+    <dimen name="quick_contact_action_button_inner_margin_x2">16dip</dimen>
+    <dimen name="quick_contact_action_button_outer_margin_ds">8dip</dimen>
+    <dimen name="quick_contact_action_button_indent_margin_ds">16dip</dimen>
+    <dimen name="quick_contact_action_button_size">32dip</dimen>
+
+    <dimen name="call_detail_contact_name_margin_ds">16dip</dimen>
+
     <dimen name="no_accounts_message_margin">20dip</dimen>
 
     <dimen name="contact_filter_header_min_height">24dip</dimen>

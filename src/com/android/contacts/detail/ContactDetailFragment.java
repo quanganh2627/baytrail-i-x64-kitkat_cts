@@ -112,6 +112,9 @@ import com.android.contacts.common.model.dataitem.SipAddressDataItem;
 import com.android.contacts.common.model.dataitem.StructuredNameDataItem;
 import com.android.contacts.common.model.dataitem.StructuredPostalDataItem;
 import com.android.contacts.common.model.dataitem.WebsiteDataItem;
+import com.android.contacts.common.util.DualSimConstants;
+import com.android.contacts.common.util.DualSimConstants;
+import com.android.contacts.common.util.SimUtils;
 import com.android.contacts.util.PhoneCapabilityTester;
 import com.android.contacts.util.StructuredPostalUtils;
 import com.android.contacts.util.UiClosables;
@@ -567,24 +570,41 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
                     PhoneDataItem phone = (PhoneDataItem) dataItem;
                     // Build phone entries
                     entry.data = phone.getFormattedPhoneNumber();
-                    final Intent phoneIntent = hasPhone ?
-                            CallUtil.getCallIntent(entry.data) : null;
+                    //final Intent phoneIntent = hasPhone ?
+                    //        CallUtil.getCallIntent(entry.data) : null;
                     Intent smsIntent = null;
                     if (hasSms) {
                         smsIntent = new Intent(Intent.ACTION_SENDTO,
                                 Uri.fromParts(CallUtil.SCHEME_SMSTO, entry.data, null));
                         smsIntent.setComponent(smsComponent);
                     }
+					
+                    //final Intent phoneIntent = hasPhone ?
+                    //        CallUtil.getCallIntent(entry.data) : null;
+                    Intent phoneIntent = null;
+                    Intent phone2Intent = null;
+                    if (hasPhone) {
+                        if (ContactsUtils.isDualSimSupported()) {
+                            phoneIntent = ContactsUtils.getDualSimCallIntent(entry.data,
+                                    DualSimConstants.DSDS_SLOT_1_ID);
+                            phone2Intent = ContactsUtils.getDualSimCallIntent(entry.data,
+                                    DualSimConstants.DSDS_SLOT_2_ID);
+                        } else {
+                            phoneIntent = CallUtil.getCallIntent(entry.data);
+                        }
+                    }
 
                     // Configure Icons and Intents.
                     if (hasPhone && hasSms) {
                         entry.intent = phoneIntent;
+                        entry.primary2Intent = phone2Intent;
                         entry.secondaryIntent = smsIntent;
                         entry.secondaryActionIcon = kind.iconAltRes;
                         entry.secondaryActionDescription =
                             ContactDisplayUtils.getSmsLabelResourceId(entry.type);
                     } else if (hasPhone) {
                         entry.intent = phoneIntent;
+                        entry.primary2Intent = phone2Intent;
                     } else if (hasSms) {
                         entry.intent = smsIntent;
                     } else {
@@ -1086,6 +1106,9 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
          */
         public void click(View clickedView, Listener fragmentListener) {
         }
+
+        public void click2(View clickedView, Listener fragmentListener) {
+        }
     }
 
     /**
@@ -1217,6 +1240,7 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
         public int secondaryActionIcon = -1;
         public int secondaryActionDescription = -1;
         public Intent intent;
+        private Intent primary2Intent = null;
         public Intent secondaryIntent = null;
         public ArrayList<Long> ids = new ArrayList<Long>();
         public int collapseCount = 0;
@@ -1350,6 +1374,7 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
 
             if (!TextUtils.equals(mimetype, entry.mimetype)
                     || !ContactsUtils.areIntentActionEqual(intent, entry.intent)
+                    || !ContactsUtils.areIntentActionEqual(primary2Intent, entry.primary2Intent)
                     || !ContactsUtils.areIntentActionEqual(
                             secondaryIntent, entry.secondaryIntent)) {
                 return false;
@@ -1362,6 +1387,12 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
         public void click(View clickedView, Listener fragmentListener) {
             if (fragmentListener == null || intent == null) return;
             fragmentListener.onItemClicked(intent);
+        }
+
+        @Override
+        public void click2(View clickedView, Listener fragmentListener) {
+            if (fragmentListener == null || primary2Intent == null) return;
+            fragmentListener.onItemClicked(primary2Intent);
         }
     }
 
@@ -1440,12 +1471,23 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
         public final ImageView secondaryActionButton;
         public final View actionsViewContainer;
         public final View primaryActionView;
+        public final View primary1ActionViewContainer;
+        public final View primary2ActionViewContainer;
+        public final View primary2ActionDivider;
         public final View secondaryActionViewContainer;
         public final View secondaryActionDivider;
         public final View primaryIndicator;
 
         public DetailViewCache(View view,
                 OnClickListener primaryActionClickListener,
+                OnClickListener secondaryActionClickListener) {
+            this(view, primaryActionClickListener, null,
+                    secondaryActionClickListener);
+        }
+
+        public DetailViewCache(View view,
+                OnClickListener primaryActionClickListener,
+                OnClickListener primary2ActionClickListener,
                 OnClickListener secondaryActionClickListener) {
             type = (TextView) view.findViewById(R.id.type);
             data = (TextView) view.findViewById(R.id.data);
@@ -1455,6 +1497,14 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
             actionsViewContainer = view.findViewById(R.id.actions_view_container);
             actionsViewContainer.setOnClickListener(primaryActionClickListener);
             primaryActionView = view.findViewById(R.id.primary_action_view);
+
+            primary1ActionViewContainer = view.findViewById(R.id.primary_1_action_view_container);
+            primary2ActionViewContainer = view.findViewById(R.id.primary_2_action_view_container);
+            if (primary2ActionViewContainer != null) {
+                primary2ActionViewContainer.setOnClickListener(primary2ActionClickListener);
+            }
+
+            primary2ActionDivider = view.findViewById(R.id.primary_2_vertical_divider);
 
             secondaryActionViewContainer = view.findViewById(
                     R.id.secondary_action_view_container);
@@ -1657,11 +1707,14 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
                 viewCache = (DetailViewCache) v.getTag();
             } else {
                 // Create a new view if needed
-                v = mInflater.inflate(R.layout.contact_detail_list_item, parent, false);
+                int resource = ContactsUtils.isDualSimSupported() ?
+                        R.layout.contact_detail_list_item_ds : R.layout.contact_detail_list_item;
+                v = mInflater.inflate(resource, parent, false);
 
                 // Cache the children
                 viewCache = new DetailViewCache(v,
-                        mPrimaryActionClickListener, mSecondaryActionClickListener);
+                        mPrimaryActionClickListener, mPrimary2ActionClickListener,
+                        mSecondaryActionClickListener);
                 v.setTag(viewCache);
             }
 
@@ -1709,6 +1762,39 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
             actionsButtonContainer.setTag(entry);
             actionsButtonContainer.setPosition(position);
             registerForContextMenu(actionsButtonContainer);
+
+            // Set the primary 2 action
+            final View primary1ActionViewContainer = views.primary1ActionViewContainer;
+            final View primary2ActionViewContainer = views.primary2ActionViewContainer;
+            // TODO:  how about sim B is NOT available?
+            if (ContactsUtils.isDualSimSupported() && entry.primary2Intent != null) {
+                primary1ActionViewContainer.setVisibility(View.VISIBLE);
+                if (SimUtils.isSim1Ready(getActivity())) {
+                    actionsButtonContainer.setOnClickListener(mPrimaryActionClickListener);
+                    primary1ActionViewContainer.setEnabled(true);
+                } else {
+                    actionsButtonContainer.setOnClickListener(null);
+                    primary1ActionViewContainer.setEnabled(false);
+                }
+                primary2ActionViewContainer.setTag(entry);
+                primary2ActionViewContainer.setVisibility(View.VISIBLE);
+                if (SimUtils.isSim2Ready(getActivity())) {
+                    primary2ActionViewContainer.setEnabled(true);
+                } else {
+                    primary2ActionViewContainer.setEnabled(false);
+                }
+                views.primary2ActionDivider.setVisibility(View.VISIBLE);
+            } else {
+                if (primary1ActionViewContainer != null) {
+                    primary1ActionViewContainer.setVisibility(View.GONE);
+                }
+                if (primary2ActionViewContainer != null) {
+                    primary2ActionViewContainer.setVisibility(View.GONE);
+                }
+                if (views.primary2ActionDivider != null) {
+                    views.primary2ActionDivider.setVisibility(View.GONE);
+                }
+            }
 
             // Set the secondary action button
             final ImageView secondaryActionView = views.secondaryActionButton;
@@ -1764,6 +1850,21 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
                     secondaryActionViewContainer.getPaddingRight(),
                     mViewEntryDimensions.getPaddingBottom());
 
+            if (primary1ActionViewContainer != null) {
+                primary1ActionViewContainer.setPadding(
+                        primary1ActionViewContainer.getPaddingLeft(),
+                        mViewEntryDimensions.getPaddingTop(),
+                        primary1ActionViewContainer.getPaddingRight(),
+                        mViewEntryDimensions.getPaddingBottom());
+            }
+            if (primary2ActionViewContainer != null) {
+                primary2ActionViewContainer.setPadding(
+                        primary2ActionViewContainer.getPaddingLeft(),
+                        mViewEntryDimensions.getPaddingTop(),
+                        primary2ActionViewContainer.getPaddingRight(),
+                        mViewEntryDimensions.getPaddingBottom());
+            }
+
             // Set the text direction
             if (entry.textDirection != TEXT_DIRECTION_UNDEFINED) {
                 views.data.setTextDirection(entry.textDirection);
@@ -1788,6 +1889,16 @@ public class ContactDetailFragment extends Fragment implements FragmentKeyListen
                 final ViewEntry entry = (ViewEntry) view.getTag();
                 if (entry == null) return;
                 entry.click(view, mListener);
+            }
+        };
+
+        private final OnClickListener mPrimary2ActionClickListener = new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mListener == null) return;
+                final ViewEntry entry = (ViewEntry) view.getTag();
+                if (entry == null) return;
+                entry.click2(view, mListener);
             }
         };
 

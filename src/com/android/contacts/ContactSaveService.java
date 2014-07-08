@@ -522,6 +522,9 @@ public class ContactSaveService extends IntentService {
             final ArrayList<ContentProviderOperation> diff,
             final ContentProviderResult[] results) {
         final int diffSize = diff.size();
+        if (results == null || results.length == 0 || results.length < diffSize - 1 ) { //ref
+            return -1;
+        }
         for (int i = 0; i < diffSize; i++) {
             ContentProviderOperation operation = diff.get(i);
             if (operation.getType() == ContentProviderOperation.TYPE_INSERT

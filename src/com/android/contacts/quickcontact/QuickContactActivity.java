@@ -767,5 +767,34 @@ public class QuickContactActivity extends Activity {
             // Defer the action to make the window properly repaint
             new Handler().post(startAppRunnable);
         }
+
+        @Override
+        public void onItemClicked(final Action action, final int type) {
+            final Runnable startAppRunnable = new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        switch (type) {
+                        case TYPE_ALTERNATE:
+                            startActivity(action.getAlternateIntent());
+                            break;
+                        case TYPE_PRIMARY_2:
+                            startActivity(action.getPrimary2Intent());
+                            break;
+                        default:
+                            startActivity(action.getIntent());
+                            break;
+                        }
+                    } catch (ActivityNotFoundException e) {
+                        Toast.makeText(QuickContactActivity.this, R.string.quickcontact_missing_app,
+                                Toast.LENGTH_SHORT).show();
+                    }
+
+                    close(false);
+                }
+            };
+            // Defer the action to make the window properly repaint
+            new Handler().post(startAppRunnable);
+        }
     };
 }

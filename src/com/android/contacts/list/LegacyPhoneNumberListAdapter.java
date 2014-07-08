@@ -70,6 +70,10 @@ public class LegacyPhoneNumberListAdapter extends ContactEntryListAdapter {
         return ((Cursor)getItem(position)).getString(PHONE_DISPLAY_NAME_COLUMN_INDEX);
     }
 
+    public String getContactPhoneNumber(int position) {
+        return ((Cursor)getItem(position)).getString(PHONE_NUMBER_COLUMN_INDEX);
+    }
+
     public Uri getPhoneUri(int position) {
         Cursor cursor = ((Cursor)getItem(position));
         long id = cursor.getLong(PHONE_ID_COLUMN_INDEX);

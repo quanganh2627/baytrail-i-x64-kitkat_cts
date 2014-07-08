@@ -502,6 +502,10 @@ public class ContactSelectionActivity extends ContactsActivity
             returnPickerResult(dataUri);
         }
 
+        public void onPickPhoneNumberAction2(Uri dataUri) {
+            returnPickerResult(dataUri);
+        }
+
         @Override
         public void onCallNumberDirectly(String phoneNumber) {
             Log.w(TAG, "Unsupported call.");

@@ -40,10 +40,15 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.android.contacts.ContactSaveService;
+import com.android.contacts.common.ContactsUtils;
+import com.android.contacts.ExportSimContactsActivity;
 import com.android.contacts.R;
 import com.android.contacts.activities.ContactDetailActivity.FragmentKeyListener;
+import com.android.contacts.common.CallUtil;
 import com.android.contacts.common.list.ShortcutIntentBuilder;
 import com.android.contacts.common.list.ShortcutIntentBuilder.OnShortcutIntentCreatedListener;
+import com.android.contacts.common.util.DualSimConstants;
+import com.android.contacts.common.util.SimUtils;
 import com.android.contacts.common.model.Contact;
 import com.android.contacts.common.model.ContactLoader;
 import com.android.contacts.util.PhoneCapabilityTester;
@@ -225,7 +230,9 @@ public class ContactLoaderFragment extends Fragment implements FragmentKeyListen
 
     @Override
     public void onCreateOptionsMenu(Menu menu, final MenuInflater inflater) {
-        inflater.inflate(R.menu.view_contact, menu);
+        int resource = ContactsUtils.isDualSimSupported() ?
+                R.menu.view_contact_ds : R.menu.view_contact;
+        inflater.inflate(resource, menu);
     }
 
     public boolean isOptionsMenuChanged() {
@@ -244,6 +251,22 @@ public class ContactLoaderFragment extends Fragment implements FragmentKeyListen
         if (mContactData != null) {
             mSendToVoicemailState = mContactData.isSendToVoicemail();
             mCustomRingtone = mContactData.getCustomRingtone();
+        }
+
+        final MenuItem exportToSim1 = menu.findItem(R.id.menu_export_to_sim_1);
+        final MenuItem exportToSim2 = menu.findItem(R.id.menu_export_to_sim_2);
+        if (ContactsUtils.isDualSimSupported()) {
+            exportToSim1.setVisible(SimUtils.isSimAccessible(getActivity(),
+                    DualSimConstants.DSDS_SLOT_1_ID));
+            exportToSim2.setVisible(SimUtils.isSimAccessible(getActivity(),
+                    DualSimConstants.DSDS_SLOT_2_ID));
+        } else {
+            if (exportToSim1 != null) {
+                exportToSim1.setVisible(false);
+            }
+            if (exportToSim2 != null) {
+                exportToSim2.setVisible(false);
+            }
         }
 
         // Hide telephony-related settings (ringtone, send to voicemail)
@@ -300,6 +323,16 @@ public class ContactLoaderFragment extends Fragment implements FragmentKeyListen
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_export_to_sim_1:
+            case R.id.menu_export_to_sim_2: {
+                Intent exportIntent = new Intent(getActivity(), ExportSimContactsActivity.class);
+                exportIntent.setData(mLookupUri);
+                if (item.getItemId() == R.id.menu_export_to_sim_2) {
+                    exportIntent.putExtra("export_to_sim_b", true);
+                }
+                getActivity().startActivity(exportIntent);
+                break;
+            }
             case R.id.menu_edit: {
                 if (mListener != null) mListener.onEditRequested(mLookupUri);
                 break;
