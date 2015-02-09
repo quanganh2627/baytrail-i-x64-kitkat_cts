@@ -512,7 +512,8 @@
 
         <activity android:name="ExportSimContactsActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:theme="@style/BackgroundOnlyTheme" />
+            android:theme="@style/BackgroundOnlyTheme" 
+	    android:exported="true"/>
 
         <meta-data android:name="android.nfc.disable_beam_default" android:value="true" />
     </application>
