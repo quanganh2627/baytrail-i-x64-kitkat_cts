@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"שיחה אחרונה. <xliff:g id="CALL_TYPE">%s</xliff:g>‏. <xliff:g id="PHONE_NUMBER">%s</xliff:g>‏. <xliff:g id="DATE">%s</xliff:g>‏. לחץ כדי להתקשר חזרה"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"אתה: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"‏Hangouts פועל טוב יותר כשאתה מזין את מזהה ה-Hangouts של המשתמש בשדה האימייל או בשדה הטלפון."</string>
+
+    <string name="confirm_export_all_to_sim">רשימת אנשי הקשר שלך תיוצא לכרטיס SIM.</string>
+    <string name="confirm_export_contact_to_sim">איש הקשר שלך <xliff:g id="name">1$s</xliff:g> יועבר בייצוא לכרטיס SIM.</string>
+    <string name="confirm_export_all_to_sim_summary">רשימת אנשי הקשר שלך תיוצא ל-<xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">איש הקשר שלך <xliff:g id="name">1$s</xliff:g> יועבר בייצוא ל- <xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">אין די שטח ב-SIM</string>
+    <string name="confirm_export_till_sim_full_message">כרטיס ה-SIM שלך קטן מדי. אנשי הקשר שלך יועברו בייצוא עד שכרטיס ה-SIM יתמלא. האם ברצונך להמשיך?</string>
+    <string name="exporting_contact_message_summary">נתוני אנשי הקשר שלך מיוצאים ל-<xliff:g id="sim_name">1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">הודעות</string>
+    <string name="confirm_export_name_will_be_truncated">שם איש הקשר שלך ארוך מדי והוא ייקטע.</string>
+    <string name="pinned_header_contacts_to_be_truncated">אנשי קשר שייקטעו</string>
+    <string name="pinned_header_contacts_to_be_ignored">אנשי קשר שיש להתעלם מהם</string>
+    <string name="pinned_header_contacts_not_be_exported">אנשי קשר לא לייצוא</string>
+
+    <string name="searching_contacts_title">חיפוש אנשי קשר</string>
+    <string name="searching_contacts_message">מחפש אנשי קשר שניתן לייצא לכרטיס SIM</string>
+    <string name="checking_sim_card_title">בדיקת כרטיס SIM</string>
+    <string name="checking_sim_card_message">בודק אם כרטיס ה-SIM מכיל די שטח לייצוא אנשי הקשר</string>
+    <string name="export_failure_no_contact_title">לא נמצאו אנשי קשר</string>
+    <string name="export_failure_no_contact">לא נמצאו אנשי קשר שניתן לייצא לכרטיס SIM.</string>
+    <string name="export_failure_not_completed_title">הייצוא לא הושלם</string>
+    <string name="export_failure_not_all_completed">ייצוא כל אנשי הקשר שלך לכרטיס SIM נכשל</string>
+    <string name="export_failure_not_completed">ייצוא איש הקשר שלך <xliff:g id="name">1$s</xliff:g> לכרטיס SIM נכשל</string>
+    <string name="export_failure_title">הייצוא נכשל</string>
+    <string name="export_failure_unable_to_read_contact">לא ניתן לקרוא את הנתונים של איש הקשר שנבחר.</string>
+    <string name="export_failure_sim_is_not_ready">כרטיס ה-SIM לא מוכן, נסה שוב מאוחר יותר.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">איש הקשר מכיל מספר ארוך ולא ניתן לייצא אותו.</string>
+
+    <string name="export_to_sim">ייצא לכרטיס SIM</string>
+    <string name="export_to_sim_summary">ייצא לכרטיס SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">כרטיס SIM</string>
 </resources>

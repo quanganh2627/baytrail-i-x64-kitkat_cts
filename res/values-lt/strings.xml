@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"Neseniai skambino. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. Spustelėkite, kad atskambintumėte."</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Jūs: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"„Hangout“ veikia geriau įvedus asmens „Hangout“ identifikatorių el. pašto ar telefono numerio lauke."</string>
+
+    <string name="confirm_export_all_to_sim">Jūsų kontaktų sąrašas bus eksportuotas į SIM kortelę.</string>
+    <string name="confirm_export_contact_to_sim">Jūsų kontaktas <xliff:g id="name">1$s</xliff:g> bus eksportuotas į SIM kortelę.</string>
+    <string name="confirm_export_all_to_sim_summary">Jūsų kontaktų sąrašas bus eksportuotas į <xliff:g id="sim_name">1$s</xliff:g></string>
+    <string name="confirm_export_contact_to_sim_summary">Jūsų kontaktas <xliff:g id="name">1$s</xliff:g> bus eksportuotas į <xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">SIM nepakanka vietos</string>
+    <string name="confirm_export_till_sim_full_message">SIM kortelė per maža. Kontaktai bus eksportuojami, kol SIM kortelė bus pilna. Ar norite tęsti?</string>
+    <string name="exporting_contact_message_summary">Jūsų kontaktų duomenys eksportuojami į <xliff:g id="sim_name">1$s</xliff:g></string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Pranešimai</string>
+    <string name="confirm_export_name_will_be_truncated">Kontakto vardas per ilgas ir bus sutrumpintas.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Sutrumpinti kontaktai</string>
+    <string name="pinned_header_contacts_to_be_ignored">Nepaisomi kontaktai</string>
+    <string name="pinned_header_contacts_not_be_exported">Neeksportuoti kontaktai</string>
+
+    <string name="searching_contacts_title">Ieškoma kontaktų</string>
+    <string name="searching_contacts_message">Ieškoma kontaktų, kuriuos galima eksportuoti į SIM kortelę</string>
+    <string name="checking_sim_card_title">Tikrinama SIM kortelė</string>
+    <string name="checking_sim_card_message">Tikrinama, ar SIM kortelėje pakanka vietos kontaktams eksportuoti</string>
+    <string name="export_failure_no_contact_title">Nerasta kontaktų</string>
+    <string name="export_failure_no_contact">Nerasta kontaktų, kuriuos galima eksportuoti į SIM kortelę.</string>
+    <string name="export_failure_not_completed_title">Eksportavimas nebaigtas</string>
+    <string name="export_failure_not_all_completed">Nepavyko eksportuoti visų kontaktų į SIM kortelę</string>
+    <string name="export_failure_not_completed">Nepavyko eksportuoti kontakto <xliff:g id="name">1$s</xliff:g> į SIM kortelę</string>
+    <string name="export_failure_title">Eksportuoti nepavyko</string>
+    <string name="export_failure_unable_to_read_contact">Negalima nuskaityti pasirinkto kontakto duomenų.</string>
+    <string name="export_failure_sim_is_not_ready">SIM kortelė dar neparengta, bandykite vėliau.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Kontaktas apima ilgą numerį, nepavyko eksportuoti.</string>
+
+    <string name="export_to_sim">Eksportuoti į SIM</string>
+    <string name="export_to_sim_summary">Eksportuoti į SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM kortelė</string>
 </resources>

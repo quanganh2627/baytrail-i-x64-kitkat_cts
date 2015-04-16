@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"हाल ही का कॉल. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. पुनः कॉल करने के लिए क्लिक करें"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"आप: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts तब बेहतर कार्य करता है जब आप व्‍यक्‍ति के Hangouts पहचानकर्ता को ईमेल फ़ील्‍ड या फ़ोन फ़ील्‍ड में डालते हैं."</string>
+
+    <string name="confirm_export_all_to_sim">आपकी संपर्क सूची SIM कार्ड पर निर्यात कर दी जाएगी.</string>
+    <string name="confirm_export_contact_to_sim">आपका संपर्क <xliff:g id="name">1$s</xliff:g> SIM कार्ड पर निर्यात कर दिया जाएगा.</string>
+    <string name="confirm_export_all_to_sim_summary">आपकी संपर्क सूची <xliff:g id="sim_name">1$s</xliff:g> पर निर्यात कर दी जाएगी.</string>
+    <string name="confirm_export_contact_to_sim_summary">आपका संपर्क <xliff:g id="name">1$s</xliff:g> यहाँ निर्यात कर दिया जाएगा <xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">SIM में पर्याप्त स्थान नहीं</string>
+    <string name="confirm_export_till_sim_full_message">आपका SIM कार्ड बहुत छोटा है. जब तक SIM कार्ड भरा हुआ है, आपके संपर्क निर्यात होते रहेंगे. क्या आप जारी रखना चाहते हैं?</string>
+    <string name="exporting_contact_message_summary">आपका संपर्क डेटा <xliff:g id="sim_name">1$s</xliff:g> को निर्यात किया जा रहा है</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">सूचनाएँ</string>
+    <string name="confirm_export_name_will_be_truncated">आपके संपर्क का नाम बहुत लंबा है, इसे छोटा कर दिया जाएगा.</string>
+    <string name="pinned_header_contacts_to_be_truncated">छोटे किए जाने वाले संपर्क</string>
+    <string name="pinned_header_contacts_to_be_ignored">अनदेखा किए जाने वाले संपर्क</string>
+    <string name="pinned_header_contacts_not_be_exported">निर्यात न किए जाने वाले संपर्क</string>
+
+    <string name="searching_contacts_title">संपर्क खोज रहा है</string>
+    <string name="searching_contacts_message">वे संपर्क खोज रहा है, जो SIM कार्ड पर निर्यात किए जा सकते हैं</string>
+    <string name="checking_sim_card_title">SIM कार्ड जाँच रहा है</string>
+    <string name="checking_sim_card_message">संपर्कों के निर्यात के लिए SIM कार्ड में पर्याप्त स्थान जाँच रहा है</string>
+    <string name="export_failure_no_contact_title">कोई भी संपर्क नहीं मिला</string>
+    <string name="export_failure_no_contact">SIM कार्ड पर निर्यात करने के लिए कोई भी संपर्क नहीं मिला.</string>
+    <string name="export_failure_not_completed_title">निर्यात पूरा नहीं हुआ</string>
+    <string name="export_failure_not_all_completed">आपके सभी संपर्क SIM कार्ड पर निर्यात नहीं किए जा सके</string>
+    <string name="export_failure_not_completed">आपका संपर्क <xliff:g id="name">1$s</xliff:g> SIM कार्ड पर निर्यात नहीं किया जा सका</string>
+    <string name="export_failure_title">निर्यात विफल</string>
+    <string name="export_failure_unable_to_read_contact">चयनित संपर्क के डेटा को पढ़ने में असमर्थ.</string>
+    <string name="export_failure_sim_is_not_ready">SIM कार्ड तैयार नहीं है, कृपया बाद में पुनः प्रयास करें.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">आपके संपर्क में लंबी संख्या है, निर्यात नहीं किया जा सकता.</string>
+
+    <string name="export_to_sim">SIM कार्ड पर निर्यात करें</string>
+    <string name="export_to_sim_summary">SIM पर निर्यात करें <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM कार्ड</string>
 </resources>

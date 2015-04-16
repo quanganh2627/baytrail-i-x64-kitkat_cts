@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"simu ya hivi karibuni. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. bofya ili upige simu"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Wewe: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangout hufanya kazi vizuri zaidi unapoweka nambari ya mtu ya utambulisho wa Hangout katika sehemu ya anwani ya barua pepe au sehemu ya nambari ya simu."</string>
+
+    <string name="confirm_export_all_to_sim">Orodha yako ya mawasiliano itahamishwa kwenye SIM kadi.</string>
+    <string name="confirm_export_contact_to_sim">Mwasiliani wako <xliff:g id="name">%1$s</xliff:g> atahamishwa kwenye SIM kadi.</string>
+    <string name="confirm_export_all_to_sim_summary">Orodha yako ya mawasiliano itahamishwa kwa <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Mwasiliani wako <xliff:g id="name">%1$s</xliff:g> atahamishwa kwa <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Hakuna nafasi ya kutosha ya SIM</string>
+    <string name="confirm_export_till_sim_full_message">SIM kadi yako ni ndogo sana. Waasiliani wako watahamishwa hadi SIM kadi ijae. Je, unataka kuendelea?</string>
+    <string name="exporting_contact_message_summary">Data yako ya mawasiliano itahamishwa kwa <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Ilani</string>
+    <string name="confirm_export_name_will_be_truncated">Jina la mwasiliani wako ni ndefu sana, litafupishwa.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Waasiliani watafupishwa</string>
+    <string name="pinned_header_contacts_to_be_ignored">Waasiliani watapuuzwa</string>
+    <string name="pinned_header_contacts_not_be_exported">Waasiliani wasiostahili kuhamishwa</string>
+
+    <string name="searching_contacts_title">Inatafuta waasiliani</string>
+    <string name="searching_contacts_message">Inatafuta waasiliani ambao wanaweza kuhamishwa kwenye SIM kadi</string>
+    <string name="checking_sim_card_title">Inakagua SIM kadi</string>
+    <string name="checking_sim_card_message">Inakagua kama SIM kadi ina nafasi ya kutosha kuhamisha waasiliani</string>
+    <string name="export_failure_no_contact_title">Hakuna waasiliani waliopatikana</string>
+    <string name="export_failure_no_contact">Haikupata waasiliani wowote ambao wanaweza kuhamishwa kwenye SIM kadi.</string>
+    <string name="export_failure_not_completed_title">Uhamishaji haujakamilika</string>
+    <string name="export_failure_not_all_completed">Imeshindwa kuhamisha waasiliani wako wote kwenye SIM kadi</string>
+    <string name="export_failure_not_completed">Imeshindwa kuhamisha mwasiliani wako <xliff:g id="name">%1$s</xliff:g> kwa SIM kadi</string>
+    <string name="export_failure_title">Imeshindwa kuhamisha</string>
+    <string name="export_failure_unable_to_read_contact">Haiwezi kusoma data ya mwasiliani aliyeteuliwa.</string>
+    <string name="export_failure_sim_is_not_ready">SIM kadi haiko tayari, tafadhali jaribu tena baadaye.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Mwasiliani wako ana namba refu, hakuweza kuhamishwa.</string>
+
+    <string name="export_to_sim">Hamisha kwa SIM kadi</string>
+    <string name="export_to_sim_summary">Hamisha kwa SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM kadi</string>
 </resources>

@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"Viimeisin puhelu. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. Soita takaisin klikkaamalla."</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Sinä: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts toimii paremmin, kun kirjoitat käyttäjän Hangouts-tunnuksen sähköposti- tai puhelinnumerokenttään."</string>
+
+    <string name="confirm_export_all_to_sim">Yhteystiedot viedään SIM-kortille.</string>
+    <string name="confirm_export_contact_to_sim">Yhteystieto <xliff:g id="name">1$s</xliff:g> viedään SIM-kortille.</string>
+    <string name="confirm_export_all_to_sim_summary">Yhteystiedot viedään kohteeseen <xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Yhteystieto <xliff:g id="name">1$s</xliff:g> viedään kohteeseen <xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">SIM-kortin tila ei riitä</string>
+    <string name="confirm_export_till_sim_full_message">SIM-kortti on liian pieni. Yhteystietoja viedään, kunnes SIM-kortti on täynnä. Haluatko jatkaa?</string>
+    <string name="exporting_contact_message_summary">Yhteystietoja viedään kohteeseen <xliff:g id="sim_name">1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Huom.</string>
+    <string name="confirm_export_name_will_be_truncated">Yhteystiedon nimi on liian pitkä, loppuosa katkaistaan.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Katkaistavat yhteystiedot</string>
+    <string name="pinned_header_contacts_to_be_ignored">Ohitettavat yhteystiedot</string>
+    <string name="pinned_header_contacts_not_be_exported">Yhteystiedot, joita ei viedä</string>
+
+    <string name="searching_contacts_title">Etsitään yhteystietoja</string>
+    <string name="searching_contacts_message">Etsitään yhteystietoja, jotka voidaan viedä SIM-kortille</string>
+    <string name="checking_sim_card_title">Tarkistetaan SIM-korttia</string>
+    <string name="checking_sim_card_message">Tarkistetaan, onko SIM-kortilla tarpeeksi tilaa yhteystietojen vientiin</string>
+    <string name="export_failure_no_contact_title">Ei yhteystietoja</string>
+    <string name="export_failure_no_contact">Ei löydetty yhteystietoja, jotka voidaan viedä SIM-kortille.</string>
+    <string name="export_failure_not_completed_title">Vienti jäi kesken</string>
+    <string name="export_failure_not_all_completed">Kaikkia yhteystietoja ei viety SIM-kortille</string>
+    <string name="export_failure_not_completed">Yhteystietoa <xliff:g id="name">1$s</xliff:g> ei viety SIM-kortille</string>
+    <string name="export_failure_title">Vienti epäonnistui</string>
+    <string name="export_failure_unable_to_read_contact">Valitun yhteystiedon tietoja ei voitu lukea.</string>
+    <string name="export_failure_sim_is_not_ready">SIM-kortti ei ole valmis, yritä uudelleen myöhemmin.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Yhteystieto sisältää pitkän numeron, vienti ei onnistu.</string>
+
+    <string name="export_to_sim">Vie SIM-kortille</string>
+    <string name="export_to_sim_summary">Vie SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM-kortti</string>
 </resources>

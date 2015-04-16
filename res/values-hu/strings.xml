@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"hívás a közelmúltban. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. kattintson a visszahíváshoz"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Ön: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"A Hangouts jobban működik, ha a személy Hangouts-azonosítóját adja meg az e-mail vagy telefonszám mezőben."</string>
+
+    <string name="confirm_export_all_to_sim">Névjegyzéke a SIM-kártyára lesz exportálva.</string>
+    <string name="confirm_export_contact_to_sim">&quot;<xliff:g id="name">1$s</xliff:g>&quot; névjegye a SIM-kártyára lesz exportálva.</string>
+    <string name="confirm_export_all_to_sim_summary">Névjegyzéke a <xliff:g id="sim_name">1$s</xliff:g>-kártyára lesz exportálva.</string>
+    <string name="confirm_export_contact_to_sim_summary">&quot;<xliff:g id="name">1$s</xliff:g>&quot; névjegye ide lesz exportálva: <xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Nincs elég hely a SIM-kártyán</string>
+    <string name="confirm_export_till_sim_full_message">SIM-kártyáján nincs elég hely. A névjegyek exportálása addig folytatódik, amíg a SIM-kártya be nem telik. Folytatja?</string>
+    <string name="exporting_contact_message_summary">Névjegyadatainak exportálása a <xliff:g id="sim_name">1$s</xliff:g>-kártyára folyamatban van.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Megjegyzések</string>
+    <string name="confirm_export_name_will_be_truncated">A névjegyen lévő név túl hosszú, ezért egy része le lesz vágva.</string>
+    <string name="pinned_header_contacts_to_be_truncated">A névjegyadatok egy része le lesz vágva</string>
+    <string name="pinned_header_contacts_to_be_ignored">Kihagyandó névjegyek</string>
+    <string name="pinned_header_contacts_not_be_exported">Nem exportálandó névjegyek</string>
+
+    <string name="searching_contacts_title">Névjegyek keresése</string>
+    <string name="searching_contacts_message">SIM-kártyára exportálható névjegyek keresése</string>
+    <string name="checking_sim_card_title">SIM-kártya ellenőrzése</string>
+    <string name="checking_sim_card_message">Ellenőrzi, hogy a SIM-kártyán van-e elég hely a névjegyek exportálásához</string>
+    <string name="export_failure_no_contact_title">Nem található névjegy</string>
+    <string name="export_failure_no_contact">Nincs SIM-kártyára exportálható névjegy.</string>
+    <string name="export_failure_not_completed_title">Az exportálás nem fejeződött be</string>
+    <string name="export_failure_not_all_completed">Nem sikerült az összes névjegyét a SIM-kártyára exportálni</string>
+    <string name="export_failure_not_completed">Nem sikerült a(z) &quot;<xliff:g id="name">1$s</xliff:g>&quot; névjegyet a SIM-kártyára exportálni</string>
+    <string name="export_failure_title">Az exportálás nem sikerült</string>
+    <string name="export_failure_unable_to_read_contact">A kiválasztott névjegy adatai nem olvashatók.</string>
+    <string name="export_failure_sim_is_not_ready">A SIM-kártya nem áll készen, próbálja meg újra később.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">A névjegyen lévő telefonszám túl hosszú, nem exportálható.</string>
+
+    <string name="export_to_sim">Exportálás SIM-kártyára</string>
+    <string name="export_to_sim_summary">Exportálás SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM-kártya</string>
 </resources>

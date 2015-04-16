@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"近期通话：<xliff:g id="CALL_TYPE">%s</xliff:g>，<xliff:g id="PHONE_NUMBER">%s</xliff:g>，<xliff:g id="DATE">%s</xliff:g>。点按可回拨。"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"您：<xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"请将联系人的环聊帐户信息输入到电子邮件地址字段或电话号码字段，以便获得更佳的环聊使用体验。"</string>
+
+    <string name="confirm_export_all_to_sim">"系统会将您的联系人列表导出到 SIM 卡。"</string>
+    <string name="confirm_export_contact_to_sim">"系统会将您的联系人 <xliff:g id="name">%1$s</xliff:g> 导出到 SIM 卡"</string>
+    <string name="confirm_export_all_to_sim_summary">"系统会将您的联系人列表导出到 <xliff:g id="sim_name">%1$s</xliff:g>。"</string>
+    <string name="confirm_export_contact_to_sim_summary">"系统会将您的联系人 <xliff:g id="name">%1$s</xliff:g> 导出到 <xliff:g id="sim_name">%1$s</xliff:g>"</string>
+    <string name="confirm_export_no_enough_sim_space_title">"SIM 卡空间不足"</string>
+    <string name="confirm_export_till_sim_full_message">"您的 SIM 卡空间太小。您的联系人将被导出到 SIM 卡直到 SIM 卡满。您想要继续吗？"</string>
+    <string name="exporting_contact_message_summary">"正在将您的联系人数据导出到 <xliff:g id="sim_name">%1$s</xliff:g>"</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">"注意"</string>
+    <string name="confirm_export_name_will_be_truncated">"您的联系人名字超长，会被截短。"</string>
+    <string name="pinned_header_contacts_to_be_truncated">"名字会被截短的联系人"</string>
+    <string name="pinned_header_contacts_to_be_ignored">"号码超长会被忽略的联系人"</string>
+    <string name="pinned_header_contacts_not_be_exported">"没有被导出的联系人"</string>
+
+    <string name="searching_contacts_title">"正在搜索联系人"</string>
+    <string name="searching_contacts_message">"正在搜索可以导出到 SIM 卡中的联系人..."</string>
+    <string name="checking_sim_card_title">"正在检查 SIM 卡"</string>
+    <string name="checking_sim_card_message">"检查 SIM 卡是否有足够的空间来做联系人导出"</string>
+    <string name="export_failure_no_contact_title">"未找到联系人"</string>
+    <string name="export_failure_no_contact">"没有可以导出到 SIM 卡中的联系人。"</string>
+    <string name="export_failure_not_completed_title">"导出未完成"</string>
+    <string name="export_failure_not_all_completed">"未能将您的所有联系人导出到 SIM 卡。"</string>
+    <string name="export_failure_not_completed">"未能将您的联系人 <xliff:g id="name">%1$s</xliff:g> 导出到 SIM 卡。"</string>
+    <string name="export_failure_title">"导出失败"</string>
+    <string name="export_failure_unable_to_read_contact">"无法读取被选中联系人数据"</string>
+    <string name="export_failure_sim_is_not_ready">"SIM 卡不可用，请稍候再试。"</string>
+    <string name="export_failure_sim_is_busy">"SIM 卡忙，请稍候再试。"</string>
+    <string name="export_failure_contains_long_number">"您的联系人包含超长号码, 无法被导出。"</string>
+
+    <string name="export_to_sim">导出到 SIM 卡</string>
+    <string name="export_to_sim_summary">导出到 SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM 卡</string>
 </resources>

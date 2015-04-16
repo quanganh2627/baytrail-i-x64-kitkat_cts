@@ -72,6 +72,8 @@ import android.provider.ContactsContract.RawContacts;
 import android.support.v7.graphics.Palette;
 import android.telecom.PhoneAccount;
 import android.telecom.TelecomManager;
+import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
 import android.text.BidiFormatter;
 import android.text.SpannableString;
 import android.text.TextDirectionHeuristics;
@@ -201,6 +203,10 @@ public class QuickContactActivity extends ContactsActivity {
     private static final String CALL_ORIGIN_QUICK_CONTACTS_ACTIVITY =
             "com.android.contacts.quickcontact.QuickContactActivity";
 
+    private static final String KEY_SUBSCRIPTION_ID = "subscriptionId";
+    private static final int SLOT_INDEX_0 = 0;
+    private static final int SLOT_INDEX_1 = 1;
+
     /**
      * The URI used to load the the Contact. Once the contact is loaded, use Contact#getLookupUri()
      * instead of referencing this URI.
@@ -247,6 +253,11 @@ public class QuickContactActivity extends ContactsActivity {
     private Contact mContactData;
     private ContactLoader mContactLoader;
     private PorterDuffColorFilter mColorFilter;
+
+    private SubscriptionManager mSubscriptionManager;
+    private boolean mIsExportToSimAllowed = false;
+    private int mSubIdForSlot0 = -1;
+    private int mSubIdForSlot1 = -1;
 
     private final ImageViewDrawableSetter mPhotoSetter = new ImageViewDrawableSetter();
 
@@ -752,6 +763,9 @@ public class QuickContactActivity extends ContactsActivity {
                         }
                     });
         }
+
+        mIsExportToSimAllowed = getResources().getBoolean(R.bool.config_allow_sim_export);
+        mSubscriptionManager = SubscriptionManager.from(getApplicationContext());
 
         Trace.endSection();
     }
@@ -2303,6 +2317,35 @@ public class QuickContactActivity extends ContactsActivity {
             final MenuItem shortcutMenuItem = menu.findItem(R.id.menu_create_contact_shortcut);
             shortcutMenuItem.setVisible(isShortcutCreatable());
 
+            if (mIsExportToSimAllowed) {
+                final List<SubscriptionInfo> subInfoRecords =
+                        mSubscriptionManager.getActiveSubscriptionInfoList();
+                final MenuItem export_to_sim_1 = menu.findItem(R.id.menu_export_to_sim_1);
+                final MenuItem export_to_sim_2 = menu.findItem(R.id.menu_export_to_sim_2);
+                int[] subIds = SubscriptionManager.getSubId(SLOT_INDEX_0);
+                mSubIdForSlot0 = (subIds != null) && (subIds.length > 0)
+                        ? subIds[0] : SubscriptionManager.getDefaultSubId();
+                subIds = SubscriptionManager.getSubId(SLOT_INDEX_1);
+                mSubIdForSlot1 = (subIds != null) && (subIds.length > 0)
+                        ? subIds[0] : SubscriptionManager.getDefaultSubId();
+
+                if (subInfoRecords != null) {
+                    if (subInfoRecords.size() == 1) {
+                        if (subInfoRecords.get(0).getSimSlotIndex() == 0) {
+                            export_to_sim_2.setVisible(false);
+                        } else {
+                            export_to_sim_1.setVisible(false);
+                        }
+                    } else if (subInfoRecords.size() >= 2) {
+                        export_to_sim_1.setTitle(getString(R.string.export_to_sim_summary,
+                                subInfoRecords.get(0).getDisplayName().toString()));
+
+                        export_to_sim_2.setTitle(getString(R.string.export_to_sim_summary,
+                                subInfoRecords.get(1).getDisplayName().toString()));
+                    }
+                }
+            }
+
             return true;
         }
         return false;
@@ -2385,6 +2428,25 @@ public class QuickContactActivity extends ContactsActivity {
             case R.id.menu_create_contact_shortcut:
                 createLauncherShortcutWithContact();
                 return true;
+
+            case R.id.menu_export_to_sim_1: {
+                Intent exportIntent = new Intent();
+                exportIntent.setClassName("com.android.contacts",
+                        "com.android.contacts.ExportSimContactsActivity");
+                exportIntent.setData(mLookupUri);
+                exportIntent.putExtra(KEY_SUBSCRIPTION_ID, mSubIdForSlot0);
+                startActivity(exportIntent);
+                return true;
+            }
+            case R.id.menu_export_to_sim_2: {
+                Intent exportIntent = new Intent();
+                exportIntent.setClassName("com.android.contacts",
+                        "com.android.contacts.ExportSimContactsActivity");
+                exportIntent.setData(mLookupUri);
+                exportIntent.putExtra(KEY_SUBSCRIPTION_ID, mSubIdForSlot1);
+                startActivity(exportIntent);
+                return true;
+            }
             default:
                 return super.onOptionsItemSelected(item);
         }

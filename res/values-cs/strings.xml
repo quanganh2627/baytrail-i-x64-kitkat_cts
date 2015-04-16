@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"nedávný hovor. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. kliknutím zavoláte zpět"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Vy: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Aplikace Hangouts funguje lépe, když do pole pro e-mail nebo pro telefon zadáte identifikátor osoby ve službě Hangouts."</string>
+
+    <string name="confirm_export_all_to_sim">Seznam kontaktů bude exportován na SIM kartu.</string>
+    <string name="confirm_export_contact_to_sim">Seznam kontaktů <xliff:g id="name">%1$s</xliff:g> bude exportován na SIM kartu.</string>
+    <string name="confirm_export_all_to_sim_summary">Seznam kontaktů bude exportován na SIM kartu <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Seznam kontaktů <xliff:g id="name">%1$s</xliff:g> bude exportován na SIM kartu <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Na SIM kartě není dostatek místa</string>
+    <string name="confirm_export_till_sim_full_message">SIM karta je příliš malá. Kontakty budou exportovány až do zaplnění SIM karty. Chcete pokračovat?</string>
+    <string name="exporting_contact_message_summary">Probíhá export seznamu kontaktních údajů na SIM kartu <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Poznámky</string>
+    <string name="confirm_export_name_will_be_truncated">Jméno kontaktu je příliš dlouhé, bude zkráceno.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Kontakty, které budou zkráceny</string>
+    <string name="pinned_header_contacts_to_be_ignored">Kontakty, které budou ignorovány</string>
+    <string name="pinned_header_contacts_not_be_exported">Kontakty, které nebudou exportovány</string>
+
+    <string name="searching_contacts_title">Hledání kontaktů</string>
+    <string name="searching_contacts_message">Hledání kontaktů, které lze exportovat na SIM kartu</string>
+    <string name="checking_sim_card_title">Kontrola SIM karty</string>
+    <string name="checking_sim_card_message">Kontrola dostatku místa na SIM kartě pro export kontaktů</string>
+    <string name="export_failure_no_contact_title">Nelze najít žádné kontakty</string>
+    <string name="export_failure_no_contact">Nelze najít žádné kontakty, které lze exportovat na SIM kartu.</string>
+    <string name="export_failure_not_completed_title">Export nebyl dokončen</string>
+    <string name="export_failure_not_all_completed">Nepodařilo se exportovat všechny kontakty na SIM kartu</string>
+    <string name="export_failure_not_completed">Kontakt <xliff:g id="name">%1$s</xliff:g> se nepodařilo exportovat na SIM kartu</string>
+    <string name="export_failure_title">Export se nezdařil</string>
+    <string name="export_failure_unable_to_read_contact">Data vybraného kontaktu nelze přečíst.</string>
+    <string name="export_failure_sim_is_not_ready">SIM karta není připravena, opakujte akci později.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Kontakt obsahuje dlouhá čísla, nelze ho exportovat.</string>
+
+    <string name="export_to_sim">Export na SIM kartu</string>
+    <string name="export_to_sim_summary">Export na SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM karta</string>
 </resources>

@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"최근 통화내역은 다음과 같습니다. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. 연락 온 번호로 다시 전화하려면 클릭하세요."</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"내가 보낸 메시지: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"사용자의 행아웃 식별자를 이메일 입력란 또는 휴대전화 입력란에 입력하면 행아웃이 더 잘 작동합니다."</string>
+
+    <string name="confirm_export_all_to_sim">연락처 목록을 SIM 카드로 내보냅니다.</string>
+    <string name="confirm_export_contact_to_sim">연락처를 <xliff:g id="name">1$s</xliff:g> SIM 카드로 내보냅니다.</string>
+    <string name="confirm_export_all_to_sim_summary">연락처 목록을 <xliff:g id="sim_name">1$s</xliff:g>(으)로 내보냅니다.</string>
+    <string name="confirm_export_contact_to_sim_summary">연락처 <xliff:g id="name">1$s</xliff:g>을(를) <xliff:g id="sim_name">1$s</xliff:g>(으)로 내보냅니다.</string>
+    <string name="confirm_export_no_enough_sim_space_title">SIM 공간 부족</string>
+    <string name="confirm_export_till_sim_full_message">SIM 카드가 작습니다. SIM 카드에 최대한 연락처를 내보냅니다. 계속하시겠습니까?</string>
+    <string name="exporting_contact_message_summary">연락처 데이터를 <xliff:g id="sim_name">1$s</xliff:g>(으)로 내보냅니다.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">알림</string>
+    <string name="confirm_export_name_will_be_truncated">연락처 이름이 너무 길어 잘립니다.</string>
+    <string name="pinned_header_contacts_to_be_truncated">잘리는 연락처</string>
+    <string name="pinned_header_contacts_to_be_ignored">무시할 연락처</string>
+    <string name="pinned_header_contacts_not_be_exported">내보내지 않을 연락처</string>
+
+    <string name="searching_contacts_title">연락처 검색 중</string>
+    <string name="searching_contacts_message">SIM 카드로 내보낼 수 있는 연락처 검색 중</string>
+    <string name="checking_sim_card_title">SIM 확인 중</string>
+    <string name="checking_sim_card_message">SIM 카드에 연락처를 내보낼 만한 공간이 있는지 확인 중</string>
+    <string name="export_failure_no_contact_title">연락처 없음</string>
+    <string name="export_failure_no_contact">SIM 카드로 내보낼 수 있는 연락처가 없습니다.</string>
+    <string name="export_failure_not_completed_title">내보내기 중단</string>
+    <string name="export_failure_not_all_completed">일부 연락처를 SIM 카드로 내보내지 못함</string>
+    <string name="export_failure_not_completed">연락처 <xliff:g id="name">1$s</xliff:g> SIM 카드로 내보내지 못함</string>
+    <string name="export_failure_title">내보내기 실패</string>
+    <string name="export_failure_unable_to_read_contact">선택한 연락처 데이터를 읽을 수 없습니다.</string>
+    <string name="export_failure_sim_is_not_ready">SIM 카드 준비 부족이니 다시 하십시오.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">연락처에 긴 숫자가 있어 내보낼 수 없습니다.</string>
+
+    <string name="export_to_sim">SIM으로 내보내기</string>
+    <string name="export_to_sim_summary">SIM으로 내보내기 <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM 카드</string>
 </resources>

@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"Останній дзвінок: <xliff:g id="CALL_TYPE">%s</xliff:g>, <xliff:g id="PHONE_NUMBER">%s</xliff:g>, <xliff:g id="DATE">%s</xliff:g>. Натисніть, щоб зателефонувати"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Ви: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Щоб сервіс Hangouts працював краще, введіть свій ідентифікатор Hangouts у поле \"Електронна адреса\" або \"Телефон\"."</string>
+
+    <string name="confirm_export_all_to_sim">Список контактів буде експортований на SIM-картку.</string>
+    <string name="confirm_export_contact_to_sim">Контакт <xliff:g id="name">%1$s</xliff:g> буде експортований на SIM-картку.</string>
+    <string name="confirm_export_all_to_sim_summary">Список контактів буде експортований на <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Контакт <xliff:g id="name">%1$s</xliff:g> буде експортований на <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Недост. місця на SIM-картці</string>
+    <string name="confirm_export_till_sim_full_message">Малий об’єм пам’яті SIM-картки. Контакти будуть експортовані до заповнення SIM-картки. Продовжити?</string>
+    <string name="exporting_contact_message_summary">Дані контактів експортуються на <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Примітки</string>
+    <string name="confirm_export_name_will_be_truncated">Ім’я контакту занадто довге, воно буде скорочене.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Скоротити контакти:</string>
+    <string name="pinned_header_contacts_to_be_ignored">Ігнорувати контакти:</string>
+    <string name="pinned_header_contacts_not_be_exported">Не експортувати контакти:</string>
+
+    <string name="searching_contacts_title">Пошук контактів</string>
+    <string name="searching_contacts_message">Пошук контактів для експорту на SIM-картку</string>
+    <string name="checking_sim_card_title">Перевірка SIM-картки</string>
+    <string name="checking_sim_card_message">Перевірка місця на SIM-картці для експорту контактів</string>
+    <string name="export_failure_no_contact_title">Контакти не знайдені</string>
+    <string name="export_failure_no_contact">Не знайдено жодного контакту для експорту на SIM-картку.</string>
+    <string name="export_failure_not_completed_title">Експорт не здійснено</string>
+    <string name="export_failure_not_all_completed">Не вдалося експортувати всі контакти на SIM-картку</string>
+    <string name="export_failure_not_completed">Не вдалося експортувати контакт <xliff:g id="name">%1$s</xliff:g> на SIM-картку</string>
+    <string name="export_failure_title">Помилка експорту</string>
+    <string name="export_failure_unable_to_read_contact">Не вдається прочитати дані вибраного контакту.</string>
+    <string name="export_failure_sim_is_not_ready">SIM-картка не готова, спробуйте пізніше.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Контакт містить довгий номер, неможливо здійснити експорт.</string>
+
+    <string name="export_to_sim">Експорт на SIM-картку</string>
+    <string name="export_to_sim_summary">Експорт на SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM-картка</string>
 </resources>

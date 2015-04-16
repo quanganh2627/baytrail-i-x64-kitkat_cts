@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"Trucada recent. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. Fes clic per tornar la trucada."</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Usuari: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts funciona millor si introdueixes l\'identificador de Hangouts de la persona corresponent al camp de l\'adreça electrònica o del telèfon."</string>
+
+    <string name="confirm_export_all_to_sim">La vostra llista de contactes s\'exportarà a la targeta SIM.</string>
+    <string name="confirm_export_contact_to_sim">El contacte <xliff:g id="name">1$s</xliff:g> s\'exportarà a la targeta SIM.</string>
+    <string name="confirm_export_all_to_sim_summary">La vostra llista de contactes s\'exportarà a <xliff:g id="sim">1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">El vostre contacte <xliff:g id="name">1$s</xliff:g> s\'exportarà a <xliff:g id="sim">1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Espai a SIM insuficient</string>
+    <string name="confirm_export_till_sim_full_message">La vostra targeta SIM és massa petita. S\'exportaran els vostres contactes fins que la SIM sigui plena. ¿Voleu continuar?</string>
+    <string name="exporting_contact_message_summary">S\'estan exportant les dades dels vostres contactes a <xliff:g id="sim">1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Avisos</string>
+    <string name="confirm_export_name_will_be_truncated">El nom del contacte és massa llarg, quedarà truncat.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Contactes que es truncaran</string>
+    <string name="pinned_header_contacts_to_be_ignored">Contactes que s\'ignoraran</string>
+    <string name="pinned_header_contacts_not_be_exported">Contactes que no s\'exportaran</string>
+
+    <string name="searching_contacts_title">Cerca de contactes</string>
+    <string name="searching_contacts_message">S\'estan cercant contactes que es podrien exportar a la targeta SIM</string>
+    <string name="checking_sim_card_title">Comprovació de SIM</string>
+    <string name="checking_sim_card_message">S\'està comprovant si la targeta SIM té prou espai per exportar-hi contactes</string>
+    <string name="export_failure_no_contact_title">No hi ha cap contacte</string>
+    <string name="export_failure_no_contact">S\'estan cercant contactes que es podrien exportar a la targeta SIM.</string>
+    <string name="export_failure_not_completed_title">Exportació no finalitzada</string>
+    <string name="export_failure_not_all_completed">No s\'ha pogut exportar tots els vostres contactes a la targeta SIM</string>
+    <string name="export_failure_not_completed">No s\'ha pogut exportar el vostre contacte <xliff:g id="name">1$s</xliff:g> a la targeta SIM</string>
+    <string name="export_failure_title">Error d\'exportació</string>
+    <string name="export_failure_unable_to_read_contact">No es poden llegir les dades del contacte seleccionat.</string>
+    <string name="export_failure_sim_is_not_ready">La targeta SIM no està preparada, torneu a provar-ho més tard.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">El contacte té un número llarg, no es pot exportar.</string>
+
+    <string name="export_to_sim">Exporta a targeta SIM</string>
+    <string name="export_to_sim_summary">Exporta a targeta SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">Targeta SIM</string>
 </resources>

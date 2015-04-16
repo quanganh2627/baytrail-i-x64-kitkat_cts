@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"πρόσφατη κλήση. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. κάντε κλικ για επιστροφή της κλήσης"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Εσείς: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Το Hangouts λειτουργεί καλύτερα όταν εισάγετε το αναγνωριστικό Hangouts του ατόμου στο πεδίο ηλεκτρονικού ταχυδρομείου ή τηλεφώνου."</string>
+
+    <string name="confirm_export_all_to_sim">Η λίστα επαφών θα εξαχθεί στην κάρτα SIM.</string>
+    <string name="confirm_export_contact_to_sim">Η επαφή <xliff:g id="name">1$s</xliff:g> θα εξαχθεί στην κάρτα SIM.</string>
+    <string name="confirm_export_all_to_sim_summary">Η λίστα επαφών θα εξαχθεί στη <xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Η επαφή <xliff:g id="name">1$s</xliff:g> θα εξαχθεί στη <xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Ανεπαρκής χώρος SIM</string>
+    <string name="confirm_export_till_sim_full_message">Πολύ μικρή κάρτα SIM. Οι επαφές θα εξαχθούν μέχρι να γεμίσει η κάρτα SIM. Θέλετε να συνεχίσετε;</string>
+    <string name="exporting_contact_message_summary">Γίνεται εξαγωγή δεδομένων επαφών στη <xliff:g id="sim_name">1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Παρατηρήσεις</string>
+    <string name="confirm_export_name_will_be_truncated">Πολύ μεγάλο όνομα επαφής, θα περικοπεί.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Επαφές για περικοπή</string>
+    <string name="pinned_header_contacts_to_be_ignored">Επαφές για παράβλεψη</string>
+    <string name="pinned_header_contacts_not_be_exported">Επαφές για μη εξαγωγή</string>
+
+    <string name="searching_contacts_title">Γίνεται αναζήτηση επαφών</string>
+    <string name="searching_contacts_message">Γίνεται αναζήτηση επαφών που μπορούν να εξαχθούν στη SIM</string>
+    <string name="checking_sim_card_title">Γίνεται έλεγχος SIM</string>
+    <string name="checking_sim_card_message">Ελέγχεται εάν η κάρτα SIM έχει αρκετό χώρο για εξαγωγή επαφών</string>
+    <string name="export_failure_no_contact_title">Δεν βρέθηκαν επαφές</string>
+    <string name="export_failure_no_contact">Δεν βρέθηκαν επαφές που θα μπορούσαν να εξαχθούν στη SIM.</string>
+    <string name="export_failure_not_completed_title">Η εξαγωγή δεν ολοκληρώθηκε</string>
+    <string name="export_failure_not_all_completed">Απέτυχε η εξαγωγή όλων των επαφών στη SIM</string>
+    <string name="export_failure_not_completed">Απέτυχε η εξαγωγή της επαφής <xliff:g id="name">1$s</xliff:g> στη SIM</string>
+    <string name="export_failure_title">Η εξαγωγή απέτυχε</string>
+    <string name="export_failure_unable_to_read_contact">Αδύνατη η ανάγνωση των δεδομένων της επιλεγμένης επαφής.</string>
+    <string name="export_failure_sim_is_not_ready">Η SIM δεν είναι έτοιμη, δοκιμάστε ξανά αργότερα.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Η επαφή περιέχει μεγάλο αριθμό, αδύνατη η εξαγωγή της.</string>
+
+    <string name="export_to_sim">Εξαγωγή στη SIM</string>
+    <string name="export_to_sim_summary">Εξαγωγή στη SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">Κάρτα SIM</string>
 </resources>

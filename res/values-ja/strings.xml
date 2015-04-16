@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"最近の通話。<xliff:g id="CALL_TYPE">%s</xliff:g>。<xliff:g id="PHONE_NUMBER">%s</xliff:g>。<xliff:g id="DATE">%s</xliff:g>。折り返し電話するにはタップしてください。"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"あなた: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"ハングアウトを使いやすくするには、相手のハングアウトIDをメールアドレス欄または電話番号欄に入力します。"</string>
+
+    <string name="confirm_export_all_to_sim">連絡先リストはSIMカードにエクスポートされます。</string>
+    <string name="confirm_export_contact_to_sim">連絡先<xliff:g id="name">1$s</xliff:g>はSIMカードにエクスポートされます。</string>
+    <string name="confirm_export_all_to_sim_summary">連絡先リストは<xliff:g id="sim_name">1$s</xliff:g>にエクスポートされます。</string>
+    <string name="confirm_export_contact_to_sim_summary">連絡先<xliff:g id="name">1$s</xliff:g>は<xliff:g id="sim_name">1$sにエクスポートされます。</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">SIMの容量不足</string>
+    <string name="confirm_export_till_sim_full_message">SIMカードの容量が小さすぎます。連絡先はSIMカードの容量が一杯になるまでエクスポートされます。続行しますか?</string>
+    <string name="exporting_contact_message_summary">連絡先データは<xliff:g id="sim_name">1$s</xliff:g>にエクスポートされています。</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">注意</string>
+    <string name="confirm_export_name_will_be_truncated">連絡先名が長すぎるため切り詰められます。</string>
+    <string name="pinned_header_contacts_to_be_truncated">切り詰められる連絡先</string>
+    <string name="pinned_header_contacts_to_be_ignored">無視される連絡先</string>
+    <string name="pinned_header_contacts_not_be_exported">エクスポートされる連絡先</string>
+
+    <string name="searching_contacts_title">連絡先の検索</string>
+    <string name="searching_contacts_message">SIMカードにエクスポートできる連絡先の検索</string>
+    <string name="checking_sim_card_title">SIMカードの確認</string>
+    <string name="checking_sim_card_message">連絡先のエクスポートに必要なSIMカードの容量の確認</string>
+    <string name="export_failure_no_contact_title">連絡先が見つからない</string>
+    <string name="export_failure_no_contact">SIMカードにエクスポートできる連絡先が見つかりません。</string>
+    <string name="export_failure_not_completed_title">完了していないエクスポート</string>
+    <string name="export_failure_not_all_completed">すべての連絡先のSIMカードへのエクスポートに失敗しました。</string>
+    <string name="export_failure_not_completed">連絡先<xliff:g id="name">1$s</xliff:g>のSIMカードへのエクスポートに失敗しました。</string>
+    <string name="export_failure_title">エクスポートの失敗</string>
+    <string name="export_failure_unable_to_read_contact">選択した連絡先のデータを読み取ることができません。</string>
+    <string name="export_failure_sim_is_not_ready">SIMカードの準備ができていません。後でもう一度やり直してください。</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">連絡先に含まれる数字が長すぎてエクスポートできません。</string>
+
+    <string name="export_to_sim">SIMカードへのエクスポート</string>
+    <string name="export_to_sim_summary">SIMカードへのエクスポート <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIMカード</string>
 </resources>

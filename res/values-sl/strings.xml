@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"nedavni klic. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. kliknite, če želite poklicati nazaj"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Vi: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Pogovori Hangouts delujejo bolje, če v polje za e-pošto ali polje za telefon vnesete identifikator osebe za pogovore Hangouts."</string>
+
+    <string name="confirm_export_all_to_sim">Imenik bo izvožen na kartico SIM.</string>
+    <string name="confirm_export_contact_to_sim">Vizitka <xliff:g id="name">%1$s</xliff:g> bo izvožena na kartico SIM.</string>
+    <string name="confirm_export_all_to_sim_summary">Imenik bo izvožen na kartico <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Vizitka <xliff:g id="name">%1$s</xliff:g> bo izvožena na kartico <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Na SIM ni dovolj prost.</string>
+    <string name="confirm_export_till_sim_full_message">Kartica SIM je premajhna. Vizitke se bodo izvažale, dokler ne bo kartica SIM polna. Želite nadaljevati?</string>
+    <string name="exporting_contact_message_summary">Podatki vizitke se izvažajo na kartico <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Obvestila</string>
+    <string name="confirm_export_name_will_be_truncated">Ime vizitke je predolgo in bo skrajšano.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Vizitke bodo skrajšane</string>
+    <string name="pinned_header_contacts_to_be_ignored">Vizitke bodo prezrte</string>
+    <string name="pinned_header_contacts_not_be_exported">Vizitka ne bodo izvožene</string>
+
+    <string name="searching_contacts_title">Iskanje vizitk</string>
+    <string name="searching_contacts_message">Iskanje vizitk, ki jih je mogoče izvoziti na kartico SIM</string>
+    <string name="checking_sim_card_title">Preverjanje kartice SIM</string>
+    <string name="checking_sim_card_message">Preverjanje, ali je na kartici SIM dovolj prostora za izvoz vizitk</string>
+    <string name="export_failure_no_contact_title">Vizitk ni mogoče najti</string>
+    <string name="export_failure_no_contact">Ni vizitk, ki jih je mogoče izvoziti na kartico SIM.</string>
+    <string name="export_failure_not_completed_title">Izvoz ni dokončan</string>
+    <string name="export_failure_not_all_completed">Vseh vizitk ni bilo mogoče izvoziti na kartico SIM</string>
+    <string name="export_failure_not_completed">Vizitke <xliff:g id="name">%1$s</xliff:g> ni bilo mogoče izvoziti na kartico SIM</string>
+    <string name="export_failure_title">Izvoz ni uspel</string>
+    <string name="export_failure_unable_to_read_contact">Podatkov o izbrani vizitki ni bilo mogoče prebrati.</string>
+    <string name="export_failure_sim_is_not_ready">Kart. SIM ni pripravljena, poskusite znova pozneje.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">V vizitki so dolge številke in je ni mogoče izvoziti.</string>
+
+    <string name="export_to_sim">Izvozi na kartico SIM</string>
+    <string name="export_to_sim_summary">Izvozi na SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">Kartica SIM</string>
 </resources>

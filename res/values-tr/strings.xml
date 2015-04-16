@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"son gelen çağrı. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. geri aramak için dokunun"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Siz: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Kişinin Hangouts tanımlayıcısını e-posta veya telefon alanına girdiğinizde Hangouts daha iyi çalışır."</string>
+
+    <string name="confirm_export_all_to_sim">Kişi listeniz SIM karta aktarılacak.</string>
+    <string name="confirm_export_contact_to_sim"><xliff:g id="name">%1$s</xliff:g> kişiniz SIM karta aktarılacak.</string>
+    <string name="confirm_export_all_to_sim_summary">Kişi listeniz <xliff:g id="sim_name">%1$s</xliff:g> öğesine aktarılacak.</string>
+    <string name="confirm_export_contact_to_sim_summary"><xliff:g id="name">%1$s</xliff:g> kişiniz şuraya aktarılacak: <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Yeterli SIM alanı yok</string>
+    <string name="confirm_export_till_sim_full_message">SIM kartınız çok küçük. Kişileriniz SIM kart dolana kadar aktarılacak. Dvm etmk istyr msnz?</string>
+    <string name="exporting_contact_message_summary">Kişi verileriniz <xliff:g id="sim_name">%1$s</xliff:g> öğesine aktarılıyor.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Uyrlr</string>
+    <string name="confirm_export_name_will_be_truncated">Kişinizin adı çok uzun, kısaltılacak.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Kısaltılacak kişiler</string>
+    <string name="pinned_header_contacts_to_be_ignored">Yok sayılacak kişiler</string>
+    <string name="pinned_header_contacts_not_be_exported">Aktarılmayacak kişiler</string>
+
+    <string name="searching_contacts_title">Kişiler aranıyor</string>
+    <string name="searching_contacts_message">SIM karta aktarılabilecek kişiler aranıyor</string>
+    <string name="checking_sim_card_title">SIM k. denetleniyor</string>
+    <string name="checking_sim_card_message">SIM kartta kişi aktarma için yeterli yer olup olmadığı denetleniyor</string>
+    <string name="export_failure_no_contact_title">Kişi bulunamadı</string>
+    <string name="export_failure_no_contact">SIM karta aktarılabilecek hiçbir kişi bulunamadı.</string>
+    <string name="export_failure_not_completed_title">Aktarma tamamlanmadı</string>
+    <string name="export_failure_not_all_completed">Tüm kişileriniz SIM karta aktarılamadı</string>
+    <string name="export_failure_not_completed"><xliff:g id="name">%1$s</xliff:g> kişiniz SIM karta aktarılamadı</string>
+    <string name="export_failure_title">Aktrm bşrsz</string>
+    <string name="export_failure_unable_to_read_contact">Seçilen kişinin verileri okunamadı.</string>
+    <string name="export_failure_sim_is_not_ready">SIM k. hazır değil, ltfn daha snr tkrr deneyin.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Kişiniz uzun bir numara içerdiğinden aktarılamadı.</string>
+
+    <string name="export_to_sim">SIM karta aktar</string>
+    <string name="export_to_sim_summary">SIM aktar <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM kart</string>
 </resources>

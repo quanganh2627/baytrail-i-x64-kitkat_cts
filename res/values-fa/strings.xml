@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"تماس اخیر. <xliff:g id="CALL_TYPE">%s</xliff:g>‏. <xliff:g id="PHONE_NUMBER">%s</xliff:g>‏. ‏<xliff:g id="DATE">%s</xliff:g>. برای بازگرداندن تماس کلیک کنید"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"شما: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"‏وقتی شناسه Hangouts شخص را در فیلد ایمیل یا فیلد تلفن وارد کنید، Hangouts بهتر کار می‌کند."</string>
+
+    <string name="confirm_export_all_to_sim">لیست مخاطب شما به SIM صادر می شود.</string>
+    <string name="confirm_export_contact_to_sim">مخاطب <xliff:g id="name">1$s</xliff:g> به SIM صادر خواهد شد.</string>
+    <string name="confirm_export_all_to_sim_summary">لیست مخاطب شما به <xliff:g id="sim_name">1$s</xliff:g> صادر خواهد شد.</string>
+    <string name="confirm_export_contact_to_sim_summary">مخاطب شما <xliff:g id="name">1$s</xliff:g> صادر خواهد شد به <xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">فضای کافی روی SIM وجود ندارد</string>
+    <string name="confirm_export_till_sim_full_message">SIM شما بسیار کوچک است. مخاطبین شما تا پر شدن SIM صادر خواهند شد. می خواهید ادامه دهید؟</string>
+    <string name="exporting_contact_message_summary">داده های مخاطب شما به <xliff:g id="sim_name">1$s</xliff:g> صادر می شوند.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">اعلامیه ها</string>
+    <string name="confirm_export_name_will_be_truncated">نام مخاطب شما بسیار طولانی است، کوتاه خواهد شد.</string>
+    <string name="pinned_header_contacts_to_be_truncated">مخاطبینی که باید کوتاه شوند</string>
+    <string name="pinned_header_contacts_to_be_ignored">مخاطبینی که باید نادیده گرفته شوند</string>
+    <string name="pinned_header_contacts_not_be_exported">مخاطبینی که نباید صادر شوند</string>
+
+    <string name="searching_contacts_title">در حال جستجوی مخاطبین</string>
+    <string name="searching_contacts_message">جستجوی مخاطبینی که به SIM صادر می شوند</string>
+    <string name="checking_sim_card_title">بررسی SIM</string>
+    <string name="checking_sim_card_message">بررسی کنید که آیا SIM فضای کافی برای صدور مخاطبین دارد</string>
+    <string name="export_failure_no_contact_title">مخاطبی یافت نشد</string>
+    <string name="export_failure_no_contact">هیچ مخاطبی برای صادر شدن به SIM یافت نشد.</string>
+    <string name="export_failure_not_completed_title">صادر کردن تمام نشد</string>
+    <string name="export_failure_not_all_completed">صادر کردن همه مخاطبین به SIM انجام نشد</string>
+    <string name="export_failure_not_completed">صادر کردن مخاطب <xliff:g id="name">1$s</xliff:g> به SIM انجام نشد</string>
+    <string name="export_failure_title">صادر کردن انجام نشد</string>
+    <string name="export_failure_unable_to_read_contact">خواندن داده های مخاطب انتخابی ممکن نیست.</string>
+    <string name="export_failure_sim_is_not_ready">SIM آماده نیست، لطفاً بعداً دوباره امتحان کنید.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">شماره مخاطب شما طولانی است، صادر نمی شود.</string>
+
+    <string name="export_to_sim">صادر کردن به SIM</string>
+    <string name="export_to_sim_summary">صادر کردن به SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM کارت</string>
 </resources>

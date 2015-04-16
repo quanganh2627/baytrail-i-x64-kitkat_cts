@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"cuộc gọi gần đây. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. nhấp để gọi lại"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Bạn: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts hoạt động tốt hơn khi bạn nhập số nhận dạng Hangouts của người đó vào trường email hoặc trường điện thoại."</string>
+
+    <string name="confirm_export_all_to_sim">Danh sách liên lạc của bạn sẽ được xuất vào thẻ SIM.</string>
+    <string name="confirm_export_all_to_sim">Số liên lạc <xliff:g id="name">%1$s</xliff:g> của bạn sẽ được xuất vào thẻ SIM.</string>
+    <string name="confirm_export_all_to_sim_summary">Danh sách liên lạc của bạn sẽ được xuất vào <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="confirm_export_contact_to_sim_summary">Số liên lạc <xliff:g id="name">%1$s</xliff:g> của bạn sẽ được xuất vào <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="confirm_export_no_enough_sim_space_title">Không đủ bộ nhớ trên SIM</string>
+    <string name="confirm_export_till_sim_full_message">Thẻ SIM quá nhỏ. Các số liên lạc sẽ được xuất cho đến khi thẻ SIM đầy. Bạn có muốn tiếp tục không?</string>
+    <string name="exporting_contact_message_summary">Dữ liệu liên lạc đang được xuất vào <xliff:g id="sim_name">%1$s</xliff:g></string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Thông báo</string>
+    <string name="confirm_export_name_will_be_truncated">Tên của số liên lạc quá dài sẽ được cắt ngắn.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Số liên lạc sẽ được cắt ngắn</string>
+    <string name="pinned_header_contacts_to_be_ignored">Số liên lạc sẽ bị bỏ qua</string>
+    <string name="pinned_header_contacts_not_be_exported">Số liên lạc không được xuất</string>
+
+    <string name="searching_contacts_title">Đang tìm kiếm số liên lạc</string>
+    <string name="searching_contacts_message">Đang tìm kiếm số liên lạc có thể được xuất vào thẻ SIM</string>
+    <string name="checking_sim_card_title">Đang kiểm tra thẻ SIM</string>
+    <string name="checking_sim_card_message">Đang kiểm tra xem thẻ SIM có đủ bộ nhớ để xuất các số liên lạc không</string>
+    <string name="export_failure_no_contact_title">Không tìm thấy số liên lạc nào</string>
+    <string name="export_failure_no_contact">Không tìm thấy bất kỳ số liên lạc nào có thể được xuất vào thẻ SIM.</string>
+    <string name="export_failure_not_completed_title">Xuất chưa hoàn thành</string>
+    <string name="export_failure_not_all_completed">Không xuất được tất cả các số liên lạc vào thẻ SIM</string>
+    <string name="export_failure_not_completed">Không xuất được số liên lạc <xliff:g id="name">%1$s</xliff:g> vào thẻ SIM</string>
+    <string name="export_failure_title">Xuất không thành công</string>
+    <string name="export_failure_unable_to_read_contact">Không thể đọc dữ liệu của số liên lạc đã chọn.</string>
+    <string name="export_failure_sim_is_not_ready">Thẻ SIM chưa sẵn sàng, vui lòng thử lại sau.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Số liên lạc chứa số dài không thể xuất.</string>
+
+    <string name="export_to_sim">Xuất vào thẻ SIM</string>
+    <string name="export_to_sim_summary">Xuất vào SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">Thẻ SIM</string>
 </resources>

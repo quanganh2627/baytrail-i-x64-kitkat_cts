@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"โทรล่าสุด <xliff:g id="CALL_TYPE">%s</xliff:g> <xliff:g id="PHONE_NUMBER">%s</xliff:g> <xliff:g id="DATE">%s</xliff:g> คลิกเพื่อโทรกลับ"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"คุณ: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"แฮงเอาท์ทำงานได้ดียิ่งขึ้นเมื่อคุณป้อนตัวระบุแฮงเอาท์ของบุคคลที่ต้องการลงในช่องอีเมลหรือช่องโทรศัพท์"</string>
+
+    <string name="confirm_export_all_to_sim">รายชื่อผู้ติดต่อของคุณจะถูกส่งออกไปยัง SIM การ์ด</string>
+    <string name="confirm_export_contact_to_sim">ผู้ติดต่อชื่อ <xliff:g id="name">%1$s</xliff:g> จะถูกส่งออกไปยัง SIM การ์ด</string>
+    <string name="confirm_export_all_to_sim_summary">รายชื่อผู้ติดต่อของคุณจะถูกส่งออกไปยัง <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="confirm_export_contact_to_sim_summary">ผู้ติดต่อชื่อ <xliff:g id="name">%1$s</xliff:g> จะถูกส่งออกไปยัง <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">SIM มีที่ว่างไม่พอ</string>
+    <string name="confirm_export_till_sim_full_message">SIM การ์ดของคุณเล็กเกินไป รายชื่อจะถูกส่งออกไปยัง SIM การ์ดจนกว่าจะเต็ม ทำต่อหรือไม่</string>
+    <string name="exporting_contact_message_summary">กำลังส่งออกข้อมูลผู้ติดต่อไปยัง <xliff:g id="sim_name">%1$s</xliff:g></string>
+
+    <string name="confirm_export_truncated_and_ignored_title">โปรดทราบ</string>
+    <string name="confirm_export_name_will_be_truncated">ชื่อผู้ติดต่อยาวเกินไปและจะถูกตัดให้สั้นลง</string>
+    <string name="pinned_header_contacts_to_be_truncated">ผู้ติดต่อที่ชื่อถูกตัดสั้น</string>
+    <string name="pinned_header_contacts_to_be_ignored">ผู้ติดต่อที่ข้าม</string>
+    <string name="pinned_header_contacts_not_be_exported">ผู้ติดต่อที่ไม่ส่งออก</string>
+
+    <string name="searching_contacts_title">กำลังค้นหาผู้ติดต่อ</string>
+    <string name="searching_contacts_message">กำลังค้นหาผู้ติดต่อที่สามารถส่งออกไปยัง SIM การ์ด</string>
+    <string name="checking_sim_card_title">กำลังตรวจสอบ SIM การ์ด</string>
+    <string name="checking_sim_card_message">กำลังตรวจสอบว่า SIM การ์ดมีที่ว่างพอสำหรับส่งออกผู้ติดต่อหรือไม่</string>
+    <string name="export_failure_no_contact_title">ไม่พบผู้ติดต่อ</string>
+    <string name="export_failure_no_contact">ไม่พบผู้ติดต่อที่สามารถส่งออกไปยัง SIM การ์ดได้</string>
+    <string name="export_failure_not_completed_title">ส่งออกข้อมูลไม่เสร็จ</string>
+    <string name="export_failure_not_all_completed">ส่งออกผู้ติดต่อทั้งหมดไปยัง SIM การ์ดไม่สำเร็จ</string>
+    <string name="export_failure_not_completed">ส่งออกผู้ติดต่อชื่อ <xliff:g id="name">%1$s</xliff:g> ไปยัง SIM การ์ดไม่สำเร็จ</string>
+    <string name="export_failure_title">ส่งออกไม่สำเร็จ</string>
+    <string name="export_failure_unable_to_read_contact">ไม่สามารถอ่านข้อมูลของผู้ติดต่อที่เลือกไว้</string>
+    <string name="export_failure_sim_is_not_ready">SIM การ์ดไม่พร้อม โปรดลองใหม่ภายหลัง</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">ผู้ติดต่อมีหมายเลขยาวเกินไป ไม่สามารถส่งออกได้</string>
+
+    <string name="export_to_sim">ส่งออกไป SIM การ์ด</string>
+    <string name="export_to_sim_summary">ส่งออกไป SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM การ์ด</string>
 </resources>

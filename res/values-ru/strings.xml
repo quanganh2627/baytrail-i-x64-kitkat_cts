@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"Недавний вызов. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. Нажмите, чтобы перезвонить."</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Вы: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Чтобы обеспечить надежную работу Hangouts, указывайте вместо адреса электронной почты или номера телефона идентификатор пользователя в Hangouts."</string>
+
+    <string name="confirm_export_all_to_sim">Спис. контактов будет экспорт. на SIM-карту.</string>
+    <string name="confirm_export_contact_to_sim">Контакт <xliff:g id="name">%1$s</xliff:g> будет экспорт. на SIM-карту.</string>
+    <string name="confirm_export_all_to_sim_summary">Спис. контактов будет экспорт. на <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="confirm_export_contact_to_sim_summary">Контакт <xliff:g id="name">%1$s</xliff:g> будет экспорт. на <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Мало места на SIM</string>
+    <string name="confirm_export_till_sim_full_message">SIM-карта слишком мала. Контакты буду экспорт. до заполнения SIM-карты. Продолжить?</string>
+    <string name="exporting_contact_message_summary">Идет экспорт данных контактов на <xliff:g id="sim_name">%1$s</xliff:g></string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Примеч.</string>
+    <string name="confirm_export_name_will_be_truncated">Слишком длинное имя контакта, будет обрезано.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Контакты для обрезки</string>
+    <string name="pinned_header_contacts_to_be_ignored">Игнор. контакты</string>
+    <string name="pinned_header_contacts_not_be_exported">Контакты не для экспорта</string>
+
+    <string name="searching_contacts_title">Поиск контактов</string>
+    <string name="searching_contacts_message">Поиск контактов, не экспортируемых на SIM-карту.</string>
+    <string name="checking_sim_card_title">Проверка SIM-карты</string>
+    <string name="checking_sim_card_message">Проверка места на SIM-карте для экспорта контактов</string>
+    <string name="export_failure_no_contact_title">Контакты не найдены</string>
+    <string name="export_failure_no_contact">Не найдено контактов, экспортируемых на SIM-карту.</string>
+    <string name="export_failure_not_completed_title">Экспорт не завершен</string>
+    <string name="export_failure_not_all_completed">Сбой экспорта всех контактов на SIM-карту</string>
+    <string name="export_failure_not_completed">Сбой экспорта контакта <xliff:g id="name">%1$s</xliff:g> на SIM-карту</string>
+    <string name="export_failure_title">Сбой экспорта</string>
+    <string name="export_failure_unable_to_read_contact">Сбой чтения данных выбранного контакта.</string>
+    <string name="export_failure_sim_is_not_ready">SIM-карта не готова, повторите попытку.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Контакт содерж. длинный номер, не подлежит экспорту.</string>
+
+    <string name="export_to_sim">Экспорт на SIM-карту</string>
+    <string name="export_to_sim_summary">Экспорт на SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM-карта</string>
 </resources>

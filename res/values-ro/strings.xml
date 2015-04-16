@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"apel recent. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. dați clic pentru a apela"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Dvs.: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts funcționează mai bine când introduceți identificatorul Hangouts al persoanei în câmpul pentru adresa de e-mail sau în câmpul pentru numărul de telefon."</string>
+
+    <string name="confirm_export_all_to_sim">Lista de contacte va fi exportată pe cartela SIM.</string>
+    <string name="confirm_export_contact_to_sim">Contactul <xliff:g id="name">%1$s</xliff:g> va fi exportat pe cartela SIM.</string>
+    <string name="confirm_export_all_to_sim_summary">Lista de contacte va fi exportată pe cartela <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Contactul dvs. <xliff:g id="name">%1$s</xliff:g> va fi exportat pe cartela <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Spaţiu insuficient pe cartela SIM</string>
+    <string name="confirm_export_till_sim_full_message">Cartela SIM este prea mică. Contactele vor fi exportate până la umplerea completă a cartelei SIM. Doriţi să continuaţi?</string>
+    <string name="exporting_contact_message_summary">Se exportă datele contactului pe cartela <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Notificări</string>
+    <string name="confirm_export_name_will_be_truncated">Numele contactului este prea lung; va fi trunchiat.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Contacte care vor fi trunchiate</string>
+    <string name="pinned_header_contacts_to_be_ignored">Contacte care vor fi ignorate</string>
+    <string name="pinned_header_contacts_not_be_exported">Contacte care nu vor fi exportate</string>
+
+    <string name="searching_contacts_title">Se caută contacte</string>
+    <string name="searching_contacts_message">Se caută contacte care pot fi exportate pe cartela SIM</string>
+    <string name="checking_sim_card_title">Se verifică cartela SIM</string>
+    <string name="checking_sim_card_message">Se verifică dacă cartela SIM dispune de suficient spaţiu pentru exportul contactelor</string>
+    <string name="export_failure_no_contact_title">Nu a fost găsit niciun contact</string>
+    <string name="export_failure_no_contact">Nu a fost găsit niciun contact care să poată fi exportat pe cartela SIM.</string>
+    <string name="export_failure_not_completed_title">Export nefinalizat</string>
+    <string name="export_failure_not_all_completed">Eşec la exportul tuturor contactelor pe cartela SIM</string>
+    <string name="export_failure_not_completed">Eşec la exportul contactului <xliff:g id="name">%1$s</xliff:g> pe cartela SIM</string>
+    <string name="export_failure_title">Export eşuat</string>
+    <string name="export_failure_unable_to_read_contact">Nu se pot citi datele contactului selectat.</string>
+    <string name="export_failure_sim_is_not_ready">Cartela SIM nu este pregătită, încercaţi din nou mai târziu.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Contactul conţine un număr lung şi nu a putut fi exportat.</string>
+
+    <string name="export_to_sim">Export pe cartela SIM</string>
+    <string name="export_to_sim_summary">Export pe SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">Cartelă SIM</string>
 </resources>

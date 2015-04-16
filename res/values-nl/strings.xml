@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"recente oproep. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. klik om terug te bellen"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"U: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts werkt beter wanneer u de Hangouts-ID van de betreffende persoon in het veld \'E-mail\' of \'Telefoon\' opgeeft."</string>
+
+    <string name="confirm_export_all_to_sim">Uw contactenlijst wordt naar SIM-kaart geëxporteerd.</string>
+    <string name="confirm_export_contact_to_sim">Uw contact <xliff:g id="name">%1$s</xliff:g> wordt naar SIM-kaart geëxporteerd.</string>
+    <string name="confirm_export_all_to_sim_summary">Uw contactenlijst wordt naar <xliff:g id="sim_name">%1$s</xliff:g> geëxporteerd.</string>
+    <string name="confirm_export_contact_to_sim_summary">Uw contact <xliff:g id="name">%1$s</xliff:g> wordt geëxporteerd naar <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Onvoldoende SIM-ruimte</string>
+    <string name="confirm_export_till_sim_full_message">Uw SIM-kaart is te klein. Uw contacten worden geëxporteerd tot de SIM-kaart vol is. Wilt u doorgaan?</string>
+    <string name="exporting_contact_message_summary">Uw contactgegevens worden naar <xliff:g id="sim_name">%1$s</xliff:g> geëxporteerd.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Mededelingen</string>
+    <string name="confirm_export_name_will_be_truncated">De naam van uw contact is te lang, wordt afgebroken.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Contacten die worden afgebroken</string>
+    <string name="pinned_header_contacts_to_be_ignored">Contacten die worden genegeerd</string>
+    <string name="pinned_header_contacts_not_be_exported">Contacten die niet worden geëxporteerd</string>
+
+    <string name="searching_contacts_title">Contacten zoeken</string>
+    <string name="searching_contacts_message">Contacten zoeken die naar SIM-kaart kunnen worden geëxporteerd</string>
+    <string name="checking_sim_card_title">SIM-kaart controleren</string>
+    <string name="checking_sim_card_message">Controleren of SIM-kaart voldoende ruimte voor contactenexport heeft</string>
+    <string name="export_failure_no_contact_title">Geen contacten gevonden</string>
+    <string name="export_failure_no_contact">Geen contacten gevonden die naar SIM-kaart kunnen worden geëxporteerd.</string>
+    <string name="export_failure_not_completed_title">Exporteren niet voltooid</string>
+    <string name="export_failure_not_all_completed">Exporteren van al uw contacten naar SIM-kaart mislukt</string>
+    <string name="export_failure_not_completed">Exporteren van uw contact <xliff:g id="name">%1$s</xliff:g> naar SIM-kaart mislukt</string>
+    <string name="export_failure_title">Exporteren mislukt</string>
+    <string name="export_failure_unable_to_read_contact">Kan de gegevens van de geselecteerde contacten niet lezen.</string>
+    <string name="export_failure_sim_is_not_ready">SIM-kaart is niet gereed. Probeer het later opnieuw.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Uw contact bevat een langer nummer, kon niet worden geëxporteerd.</string>
+
+    <string name="export_to_sim">Exporteren naar SIM-kaart</string>
+    <string name="export_to_sim_summary">Exporteren naar SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM-kaart</string>
 </resources>

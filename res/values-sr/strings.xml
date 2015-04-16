@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"Недавни позив. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. Кликните за повратни позив"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Ви: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts ради боље кад унесете Hangouts идентификатор особе у поље за имејл адресу или број телефона."</string>
+
+    <string name="confirm_export_all_to_sim">Листа контаката ће бити извезена на SIM картицу.</string>
+    <string name="confirm_export_contact_to_sim">Контакт <xliff:g id="name">%1$s</xliff:g> ће бити извезен на SIM картицу.</string>
+    <string name="confirm_export_all_to_sim_summary">Листа контаката ће бити извезена на <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Контакт <xliff:g id="name">%1$s</xliff:g> ће бити извезен на <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Нема довољно места на SIM картици</string>
+    <string name="confirm_export_till_sim_full_message">SIM картица има премало места. Контакти ће се извозити док се SIM картица не попуни. Желите ли да наставите?</string>
+    <string name="exporting_contact_message_summary">Подаци о контактима се извозе на <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Напомене</string>
+    <string name="confirm_export_name_will_be_truncated">Име контакта је предугачко и биће скраћено.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Контакти за скраћивање</string>
+    <string name="pinned_header_contacts_to_be_ignored">Контакти за занемаривање</string>
+    <string name="pinned_header_contacts_not_be_exported">Контакти који се не извозе</string>
+
+    <string name="searching_contacts_title">Претрага контаката</string>
+    <string name="searching_contacts_message">Тражим контакте који могу да се извезу на SIM картицу</string>
+    <string name="checking_sim_card_title">Провера SIM картице</string>
+    <string name="checking_sim_card_message">Проверавам да ли на SIM картици има довољно места за извоз контаката</string>
+    <string name="export_failure_no_contact_title">Није пронађен ниједан контакт</string>
+    <string name="export_failure_no_contact">Није пронађен ниједан контакт који може да се извезе на SIM картицу.</string>
+    <string name="export_failure_not_completed_title">Извоз није довршен</string>
+    <string name="export_failure_not_all_completed">Извоз контаката на SIM картицу није успео</string>
+    <string name="export_failure_not_completed">Извоз контакта <xliff:g id="name">%1$s</xliff:g> на SIM картицу није успео</string>
+    <string name="export_failure_title">Извоз није успео</string>
+    <string name="export_failure_unable_to_read_contact">Није могуће прочитати податке изабраног контакта.</string>
+    <string name="export_failure_sim_is_not_ready">SIM картица није спремна. Покушајте поново касније.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Број контакта је предугачак и не може да се извезе.</string>
+
+    <string name="export_to_sim">Извоз на SIM картицу</string>
+    <string name="export_to_sim_summary">Извоз на SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM картица</string>
 </resources>

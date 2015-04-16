@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"recent call. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. click to call back"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"You: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts works better when you enter the person\'s Hangouts identifier into the email field or phone field."</string>
+
+    <string name="confirm_export_all_to_sim">Your contact list will be exported to SIM card.</string>
+    <string name="confirm_export_contact_to_sim">Your contact <xliff:g id="name">%1$s</xliff:g> will be exported to SIM card.</string>
+    <string name="confirm_export_all_to_sim_summary">Your contact list will be exported to <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="confirm_export_contact_to_sim_summary">Your contact <xliff:g id="name">%1$s</xliff:g> will be exported to <xliff:g id="sim_name">%2$s</xliff:g></string>
+    <string name="confirm_export_no_enough_sim_space_title">No enough SIM space</string>
+    <string name="confirm_export_till_sim_full_message">Your SIM card is too small. Your contacts will be exported till SIM card is full. Do you want to continue?</string>
+    <string name="exporting_contact_message_summary">Your contact data is being exported to <xliff:g id="sim_name">%1$s</xliff:g></string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Notices</string>
+    <string name="confirm_export_name_will_be_truncated">Your contact\'s name is too long, will be truncated.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Contacts to be truncated</string>
+    <string name="pinned_header_contacts_to_be_ignored">Contacts to be ignored</string>
+    <string name="pinned_header_contacts_not_be_exported">Contacts not be exported</string>
+
+    <string name="searching_contacts_title">Searching for contacts</string>
+    <string name="searching_contacts_message">Searching for contacts that could be exported to SIM card</string>
+    <string name="checking_sim_card_title">Checking SIM card</string>
+    <string name="checking_sim_card_message">Checking whether SIM card has enough space for contacts export</string>
+    <string name="export_failure_no_contact_title">No contacts found</string>
+    <string name="export_failure_no_contact">Didn\'t find any contacts that could be exported to SIM card.</string>
+    <string name="export_failure_not_completed_title">Export not completed</string>
+    <string name="export_failure_not_all_completed">Failed to export all your contacts to SIM card</string>
+    <string name="export_failure_not_completed">Failed to export your contact <xliff:g id="name">%1$s</xliff:g> to SIM card</string>
+    <string name="export_failure_title">Export failed</string>
+    <string name="export_failure_unable_to_read_contact">Unable to read the data of the selected contact.</string>
+    <string name="export_failure_sim_is_not_ready">SIM card is not ready, please try again later.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Your contact contains long number, could not be exported.</string>
+
+    <string name="export_to_sim">Export to SIM card</string>
+    <string name="export_to_sim_summary">Export to SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM card</string>
 </resources>

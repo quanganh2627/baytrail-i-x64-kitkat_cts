@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"kamakailang tawag. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. mag-click upang tumawag"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Ikaw: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Gagana nang mas maayos ang Hangouts kapag inilagay mo ang identifier sa Hangouts ng isang tao sa field ng email o sa field ng telepono."</string>
+
+    <string name="confirm_export_all_to_sim">Ma-e-export ang listahan mo ng contact sa SIM card.</string>
+    <string name="confirm_export_contact_to_sim">Ang iyong contact na si <xliff:g id="name">%1$s</xliff:g> ay ma-e-export sa SIM card.</string>
+    <string name="confirm_export_all_to_sim_summary">Ma-e-export ang listahan mo ng contact sa <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Ang iyong contact na si <xliff:g id="name">%1$s</xliff:g> ay ma-e-export sa <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Hindi sapat ang espasyo sa SIM</string>
+    <string name="confirm_export_till_sim_full_message">Napakaliit ng iyong SIM card. Ma-e-export ang iyong mga contact hanggang sa mapuno ang SIM card. Gusto mo bang magpatuloy?</string>
+    <string name="exporting_contact_message_summary">Kasalukuyang ine-export ang data ng iyong contact sa <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Mga abiso</string>
+    <string name="confirm_export_name_will_be_truncated">Napakahaba ng pangalan ng iyong contact., mapuputol ito.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Mga contact na mapuputol</string>
+    <string name="pinned_header_contacts_to_be_ignored">Mga contact na babalewalain</string>
+    <string name="pinned_header_contacts_not_be_exported">Mga contact na hindi ma-e-export</string>
+
+    <string name="searching_contacts_title">Naghahanap ng mga contact</string>
+    <string name="searching_contacts_message">Naghahanap ng mga contact na maaaring ma-export sa SIM card</string>
+    <string name="checking_sim_card_title">Sinusuri ang SIM card</string>
+    <string name="checking_sim_card_message">Sinusuri kung may sapat na espasyo ang SIM card para sa pag-export ng mga contact</string>
+    <string name="export_failure_no_contact_title">Walang natagpuang mga contact</string>
+    <string name="export_failure_no_contact">Hindi nakahanap ng anumang contact na maaaring ma-export sa SIM card.</string>
+    <string name="export_failure_not_completed_title">Hindi nakumpleto ang pag-export</string>
+    <string name="export_failure_not_all_completed">Hindi nagawang ma-export ang lahat ng iyong contact sa SIM card</string>
+    <string name="export_failure_not_completed">Hindi nagawang ma-export ang iyong contact na si <xliff:g id="name">%1$s</xliff:g> sa SIM card</string>
+    <string name="export_failure_title">Hindi nagawa ang pag-export</string>
+    <string name="export_failure_unable_to_read_contact">Hindi nagawang mabasa ang data ng napiling contact.</string>
+    <string name="export_failure_sim_is_not_ready">Hindi nakahanda ang SIM card, mangyaring subukan muli mamaya.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Naglalaman ng mahabang numero ang iyong contact, hindi ma-e-export.</string>
+
+    <string name="export_to_sim">I-export sa SIM card</string>
+    <string name="export_to_sim_summary">I-export sa SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM card</string>
 </resources>

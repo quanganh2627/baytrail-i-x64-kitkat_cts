@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"nylig oppringning. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. klikk for å ringe tilbake"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Du: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts fungerer bedre når du går inn i personenes Hangouts-identifikatorer i e-postfeltet eller telefonfeltet."</string>
+
+    <string name="confirm_export_all_to_sim">Kontaktlisten vil bli eksportert til SIM-kortet.</string>
+    <string name="confirm_export_contact_to_sim">Kontakten <xliff:g id="name">%1$s</xliff:g> vil bli eksportert til SIM-kortet.</string>
+    <string name="confirm_export_all_to_sim_summary">Kontaktlisten vil bli eksportert til <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Kontakten <xliff:g id="name">%1$s</xliff:g> vil bli eksportert til <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Ikke nok plass på SIM-kort</string>
+    <string name="confirm_export_till_sim_full_message">SIM-kortet har for liten kapasitet. Kontaktene vil bli eksportert til SIM-kortet er fullt. Vil du fortsette?</string>
+    <string name="exporting_contact_message_summary">Kontaktdataene eksporteres til <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Merknader</string>
+    <string name="confirm_export_name_will_be_truncated">Navnet på kontakten er for langt, og vil bli avkortet.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Kontakter som blir avkortet</string>
+    <string name="pinned_header_contacts_to_be_ignored">Kontakter som blir ignorert</string>
+    <string name="pinned_header_contacts_not_be_exported">Kontakter som ikke blir eksportert</string>
+
+    <string name="searching_contacts_title">Søker etter kontakter</string>
+    <string name="searching_contacts_message">Søker etter kontakter som kan eksporteres til SIM-kortet</string>
+    <string name="checking_sim_card_title">Kontrollerer SIM-kort</string>
+    <string name="checking_sim_card_message">Kontrollerer om SIM-kortet har nok plass for eksport av kontakter</string>
+    <string name="export_failure_no_contact_title">Fant ingen kontakter</string>
+    <string name="export_failure_no_contact">Fant ingen kontakter som kan eksporteres til SIM-kortet.</string>
+    <string name="export_failure_not_completed_title">Eksport ikke fullført</string>
+    <string name="export_failure_not_all_completed">Alle kontaktene ble ikke eksportert til SIM-kortet</string>
+    <string name="export_failure_not_completed">Kontakten <xliff:g id="name">%1$s</xliff:g> ble ikke eksportert til SIM-kortet</string>
+    <string name="export_failure_title">Eksport mislyktes</string>
+    <string name="export_failure_unable_to_read_contact">Kan ikke lese dataene for den valgte kontakten.</string>
+    <string name="export_failure_sim_is_not_ready">SIM-kortet er ikke klart. Prøv på nytt senere.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Kontakten har et langt nummer, og kan ikke eksporteres.</string>
+
+    <string name="export_to_sim">Eksporter til SIM-kort</string>
+    <string name="export_to_sim_summary">Eksporter til SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM-kort</string>
 </resources>

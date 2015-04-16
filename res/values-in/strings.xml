@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"panggilan telepon terbaru. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. klik untuk menelepon balik"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Anda: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts bekerja lebih baik jika Anda memasukkan pengidentifikasi Hangouts orang tersebut ke bidang email atau bidang ponsel."</string>
+
+    <string name="confirm_export_all_to_sim">Daftar kontak akan diekspor ke Kartu SIM.</string>
+    <string name="confirm_export_contact_to_sim">Daftar kontak <xliff:g id="name">1$s</xliff:g> akan diekspor ke Kartu SIM.</string>
+    <string name="confirm_export_all_to_sim_summary">Daftar kontak akan diekspor ke <xliff:g id="sim_name">1$s</xliff:g></string>
+    <string name="confirm_export_contact_to_sim_summary">Daftar kontak <xliff:g id="name">1$s</xliff:g> akan diekspor ke <xliff:g id="sim_name">1$s</xliff:g></string>
+    <string name="confirm_export_no_enough_sim_space_title">Kapasitas SIM tdk ckp</string>
+    <string name="confirm_export_till_sim_full_message">Kartu SIM terlalu kecil. Kontak akan diekspor hingga Krt SIM penuh. Anda ingin melanjutkan?</string>
+    <string name="exporting_contact_message_summary">Data kontak akan diekspor ke <xliff:g id="sim_name">1$s</xliff:g></string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Berita</string>
+    <string name="confirm_export_name_will_be_truncated">Nama kntk terlalu panjang, dan akan dipotong.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Kntk yg akan dipotong</string>
+    <string name="pinned_header_contacts_to_be_ignored">Kontak yang diabaikan</string>
+    <string name="pinned_header_contacts_not_be_exported">Kontak yang tdk diekspor</string>
+
+    <string name="searching_contacts_title">Mencari kontak</string>
+    <string name="searching_contacts_message">Mencari kontak yang dapat diekspor ke Kartu SIM</string>
+    <string name="checking_sim_card_title">Memeriksa Krt SIM</string>
+    <string name="checking_sim_card_message">Memeriksa jika ruang di Krt SIM ckp utk kontak yang diekspor</string>
+    <string name="export_failure_no_contact_title">Tdk ada kntk ditemukan</string>
+    <string name="export_failure_no_contact">Tidak ada kntk ditemukan yang dpt diekspor ke Krt SIM.</string>
+    <string name="export_failure_not_completed_title">Ekspor belum selesai</string>
+    <string name="export_failure_not_all_completed">Gagal mengekspor semua kntk ke Krt SIM.</string>
+    <string name="export_failure_not_completed">Gagal mengekspor kontak <xliff:g id="sim_name">1$s</xliff:g> ke Kartu SIM</string>
+    <string name="export_failure_title">Ekspor gagal</string>
+    <string name="export_failure_unable_to_read_contact">Tidak dapat membaca data kontak yang dipilih.</string>
+    <string name="export_failure_sim_is_not_ready">Kartu SIM belum siap, coba lagi nanti.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Kontak berisi nomor panjang yang tidak dapat diekspor.</string>
+
+    <string name="export_to_sim">Ekspor ke Krt SIM</string>
+    <string name="export_to_sim_summary">Ekspor ke SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">Krt SIM</string>
 </resources>

@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"Nesen saņemts zvans. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. Noklikšķiniet, lai atzvanītu."</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Jūs: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Funkcija Hangouts darbojas precīzāk, ja e-pasta vai tālruņa laukā ievadāt personas Hangouts identifikatoru."</string>
+
+    <string name="confirm_export_all_to_sim">Jūsu kontaktu saraksts tiks eksportēts uz SIM karti.</string>
+    <string name="confirm_export_contact_to_sim">Jūsu kontakts <xliff:g id="name">%1$s</xliff:g> tiks eksportēts uz SIM karti.</string>
+    <string name="confirm_export_all_to_sim_summary">Jūsu kontaktu saraksts tiks eksportēts uz <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Jūsu kontakts <xliff:g id="name">%1$s</xliff:g> tiks eksportēts uz <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Nepietiek SIM vietas</string>
+    <string name="confirm_export_till_sim_full_message">SIM karte ir pārāk maza. Kontakti tiks eksportēti, līdz būs pilna SIM karte. Vai vēlaties turpināt?</string>
+    <string name="exporting_contact_message_summary">Jūsu kontaktu dati tiek eksportēti uz <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Paziņojumi</string>
+    <string name="confirm_export_name_will_be_truncated">Jūsu kontakta vārds ir par garu; tas tiks saīsināts.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Saīsināmie kontaktu vārdi</string>
+    <string name="pinned_header_contacts_to_be_ignored">Ignorējamie kontakti</string>
+    <string name="pinned_header_contacts_not_be_exported">Eksportējamie kontakti</string>
+
+    <string name="searching_contacts_title">Kontaktu meklēšana</string>
+    <string name="searching_contacts_message">Meklē kontaktus, ko eksportēt uz SIM karti</string>
+    <string name="checking_sim_card_title">SIM kartes pārbaude</string>
+    <string name="checking_sim_card_message">Pārbauda, vai SIM kartē pietiek vietas kontaktu eksportēšanai</string>
+    <string name="export_failure_no_contact_title">Nav atrasts neviens kontakts</string>
+    <string name="export_failure_no_contact">Neatrada nevienu kontaktu, ko eksportēt uz SIM karti.</string>
+    <string name="export_failure_not_completed_title">Eksportēšana nav pabeigta</string>
+    <string name="export_failure_not_all_completed">Neizdevās eksportēt visus kontaktus uz SIM karti</string>
+    <string name="export_failure_not_completed">Neizdevās eksportēt kontaktu <xliff:g id="name">%1$s</xliff:g> uz SIM karti</string>
+    <string name="export_failure_title">Eksportēšana neizdevās</string>
+    <string name="export_failure_unable_to_read_contact">Neizdevās nolasīt izvēlētā kontakta datus.</string>
+    <string name="export_failure_sim_is_not_ready">SIM karte nav gatava. Vēlāk mēģiniet vēlreiz.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Kontaktam ir garš numurs; nevar eksportēt.</string>
+
+    <string name="export_to_sim">Eksportēt uz SIM karti</string>
+    <string name="export_to_sim_summary">Eksportēt uz SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM karte</string>
 </resources>

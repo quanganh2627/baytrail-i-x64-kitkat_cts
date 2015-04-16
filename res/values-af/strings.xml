@@ -264,4 +264,37 @@
     <string name="content_description_recent_call" msgid="5183800406316723676">"onlangse oproep. <xliff:g id="CALL_TYPE">%s</xliff:g>. <xliff:g id="PHONE_NUMBER">%s</xliff:g>. <xliff:g id="DATE">%s</xliff:g>. klik om terug te bel"</string>
     <string name="message_from_you_prefix" msgid="7180706529908434482">"Jy: <xliff:g id="SMS_BODY">%s</xliff:g>"</string>
     <string name="contact_editor_hangouts_im_alert" msgid="114855385615225735">"Hangouts werk beter as jy die persoon se Hangouts-identifiseerder in die e-posveld of foonveld invoer."</string>
+
+    <string name="confirm_export_all_to_sim">Jou kontaklys sal na SIM-kaart uitgevoer word.</string>
+    <string name="confirm_export_contact_to_sim">Jou kontak <xliff:g id="name">1$s</xliff:g> sal na SIM-kaart uitgevoer word.</string>
+    <string name="confirm_export_all_to_sim_summary">Jou kontaklys sal uitgevoer word na <xliff:g id="sim_name">1$s</xliff:g>.</string>
+    <string name="confirm_export_contact_to_sim_summary">Jou kontak <xliff:g id="name">1$s</xliff:g> sal uitgevoer word na <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+    <string name="confirm_export_no_enough_sim_space_title">Nie genoeg SIM-spasie nie</string>
+    <string name="confirm_export_till_sim_full_message">Jou SIM-kaart is te klein. Jou kontakte sal uitgevoer word tot SIM-kaart vol is. Wil jy voortgaan?</string>
+    <string name="exporting_contact_message_summary">Jou kontakdata word uitgevoer na <xliff:g id="sim_name">%1$s</xliff:g>.</string>
+
+    <string name="confirm_export_truncated_and_ignored_title">Kennisgewings</string>
+    <string name="confirm_export_name_will_be_truncated">Jou kontak se naam is te lank, dit sal afgekap word.</string>
+    <string name="pinned_header_contacts_to_be_truncated">Kontakte om af te kap</string>
+    <string name="pinned_header_contacts_to_be_ignored">Kontakte om te ignoreer</string>
+    <string name="pinned_header_contacts_not_be_exported">Kontakte om nie uit te voer nie</string>
+
+    <string name="searching_contacts_title">Soek tans vir kontakte</string>
+    <string name="searching_contacts_message">Soek tans vir kontakte wat na SIM-kaart uitgevoer kan word</string>
+    <string name="checking_sim_card_title">Gaan SIM-kaart na</string>
+    <string name="checking_sim_card_message">Kyk tans of SIM-kaart genoeg spasie vir kontakte-uitvoer het</string>
+    <string name="export_failure_no_contact_title">Geen kontakte gevind nie</string>
+    <string name="export_failure_no_contact">Het geen kontakte gevind wat na SIM-kaart uitgevoer kan word nie.</string>
+    <string name="export_failure_not_completed_title">Uitvoer nie voltooi nie</string>
+    <string name="export_failure_not_all_completed">Kon nie al jou kontakte na SIM-kaart uitvoer nie</string>
+    <string name="export_failure_not_completed">Kon nie jou kontak <xliff:g id="name">1$s</xliff:g> na SIM-kaart uitvoer nie</string>
+    <string name="export_failure_title">Uitvoer misluk</string>
+    <string name="export_failure_unable_to_read_contact">Kan nie die data van gekose kontak lees nie.</string>
+    <string name="export_failure_sim_is_not_ready">SIM-kaart is nie gereed nie, probeer weer later.</string>
+    <string name="export_failure_sim_is_busy">SIM card is busy, please try again later.</string>
+    <string name="export_failure_contains_long_number">Jou kontak bevat lang nommer, kon nie uitgevoer word nie.</string>
+
+    <string name="export_to_sim">Voer na SIM-kaart uit</string>
+    <string name="export_to_sim_summary">Voer na SIM <xliff:g id="sim_name">%1$s</xliff:g></string>
+    <string name="simText">SIM-kaart</string>
 </resources>
